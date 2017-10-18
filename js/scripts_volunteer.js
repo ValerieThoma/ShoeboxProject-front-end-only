@@ -22,6 +22,7 @@ $(document).ready(()=>{
 			if(count >= 5){
 				$('.submit').removeClass('btn-warning');
 				$('.submit').addClass('btn-success');
+				$('.submit').attr('value', "I'm ready!")
 			}
 
 
