@@ -47,6 +47,11 @@
 
 ## Screenshots:
 
+## Contributing:
+
+
+## URL:
+
 
 ## Project History:
 10/18/2017 - Project Start
