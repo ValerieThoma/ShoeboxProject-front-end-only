@@ -9,30 +9,31 @@
 	<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body class="volunteer-form">
+	<h1 class="heading">Volunteer Application Form</h1>
 	<form class="sign-up-form">
-
+		<h5 class="thank-you">Thank you so much for your interest in volunteering with The Shoebox Project. Please fill out the form below (all fields are required).</h5>
 		<div class="form-wrapper">
 			<div class="full-name-error error"></div>
-			<input type="text" class="full-name" placeholder="Your Full Name">
+			<input type="text" class="full-name" placeholder="Your Full Name" required>
 		</div>
 
 		<div class="form-wrapper">
 			<div class="email-error error"></div>
-			<input type="email" class="email" placeholder="Your Email">
+			<input type="email" class="email" placeholder="Your Email" required>
 		</div>
 
 		<div class="form-wrapper">
-			<div class="full-name-error error"></div>
-			<input type="tel" class="phone" placeholder="Your Phone Number">
+			<div class="phone-error error"></div>
+			<input type="tel" class="phone" placeholder="Your Phone Number" required>
 		</div>
 
 		<div class="form-wrapper">
 			<div class="password-error error"></div>
-			<input type="password" class="password" placeholder="Your password">
+			<input type="password" class="password" placeholder="Your password" required>
 		</div>
 
 		<div class="form-wrapper">
-			<input type="password" class="password-confirm" placeholder="Confirm password">
+			<input type="password" class="password-confirm" placeholder="Confirm password" required>
 		</div>
 
 		<div class="form-wrapper">
@@ -43,16 +44,25 @@
 			</div>
 			<div>
 				<input type="checkbox" id="set-up" name="interest" value="set-up">
-				<label for="music">Set-up and tear down</label>
+				<label for="set-up">Set-up and tear down</label>
 			</div>
 			<div>
 				<input type="checkbox" id="manager" name="interest" value="manager">
-				<label for="coding">Smooth operator</label>
+				<label for="manager">Shoot management</label>
 			</div>
 			<div>
-				<input type="checkbox" id="set-up" name="interest" value="set-up">
-				<label for="music">Photo processing</label>
+				<input type="checkbox" id="processing" name="interest" value="processing">
+				<label for="processing">Photo processing</label>
 			</div>
+			<div>
+				<input type="checkbox" id="assistance" name="interest" value="assistance">
+				<label for="assistance">General assistance</label>
+			</div>
+		</div>
+
+		<div class="form-wrapper">
+			<input type="submit" class="submit" value="I'm ready!">
+			<input type="checkbox" class="privacy" required>I am at least 18 years old and will submit to a required background check.
 		</div>
 
 	</form>
