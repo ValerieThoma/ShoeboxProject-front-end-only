@@ -8,78 +8,53 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 </head>
-<body>
+<body class="volunteer-form">
 	<form class="sign-up-form">
 
-		<h1>Volunteer form</h1>
-		<h3>Thank you so much for your interest in volunteering your time! Please fill out the form below.</h3>
-
-		<div class="section">
-			<span>1</span> First Name & Address
+		<div class="form-wrapper">
+			<div class="full-name-error error"></div>
+			<input type="text" class="full-name" placeholder="Your Full Name">
 		</div>
 
 		<div class="form-wrapper">
-			<div class="full-name-error error">Your name is too short</div>
-			<label>Your full name<input type="text" class="full-name" placeholder="Your Full Name">
-			</label>
+			<div class="email-error error"></div>
+			<input type="email" class="email" placeholder="Your Email">
 		</div>
 
 		<div class="form-wrapper">
-			<div class="error address-error"></div>
-			<label>Address<input type="text" name="address" class="address" placeholder="Your Address">
-			</label>
-		</div>
-
-		<div class="section">
-			<span>2</span>Contact Info
+			<div class="full-name-error error"></div>
+			<input type="tel" class="phone" placeholder="Your Phone Number">
 		</div>
 
 		<div class="form-wrapper">
-			<div class="error email-error"></div>		
-			<label>Email<input type="email" class="email" data-field="email" placeholder="Your email address">
-			</label>
-		</div>
-		<div class="form-wrapper">
-			<div class="error phone-error"></div>		
-			<label>Phone<input type="text" class="phone" placeholder="Your Phone Number">
-			</label>
+			<div class="password-error error"></div>
+			<input type="password" class="password" placeholder="Your password">
 		</div>
 
-		<div class="section">
-			<span>3</span>Password
-		</div>
 		<div class="form-wrapper">
-			<div class="error password-error">
-				<!-- innerHTML is here -->
-				<!-- .html() is here -->
+			<input type="password" class="password-confirm" placeholder="Confirm password">
+		</div>
+
+		<div class="form-wrapper">
+			<div class="full-name-error error">I'm interested in (choose as many as you'd like):</div>
+			<div>
+				<input type="checkbox" id="photographing" name="interest" value="photographing">
+				<label for="coding">Photographing</label>
 			</div>
-			<label>Password<input type="password" class="password" placeholder="Password must be 6 characters">
-			</label>
-		</div>
-		<div class="form-wrapper">
-			<div class="error password2-error"></div>		
-			<label>Password Confirmation<input type="password" class="password2" placeholder="Confrim password">
-			</label>
-		</div>
-
-		<div class="section">		
-			<span>4</span>Skills
-		</div>
-		<div class="form-wrapper">
-			<div class="error mySkills-error"></div>		
-			<label>My Tech Skills<input type="text" class="mySkills" placeholder="Enter your skills">
-			</label>
-		</div>
-		<div class="form-wrapper">
-			<div class="error years-error"></div>		
-			<label>Years of Experience<input type="number" class="years" placeholder="Years of XP">
-			</label>
+			<div>
+				<input type="checkbox" id="set-up" name="interest" value="set-up">
+				<label for="music">Set-up and tear down</label>
+			</div>
+			<div>
+				<input type="checkbox" id="manager" name="interest" value="manager">
+				<label for="coding">Smooth operator</label>
+			</div>
+			<div>
+				<input type="checkbox" id="set-up" name="interest" value="set-up">
+				<label for="music">Photo processing</label>
+			</div>
 		</div>
 
-		<div class="form-wrapper">
-			<input type="submit" class="submit" value="Get me a job!">
-			<input type="checkbox" class="privacy" required>I agree to the terms and policies
-		</div>
 	</form>
 
 </body>
