@@ -1,3 +1,9 @@
 $(document).ready(()=>{
 	console.log("Connected!");
-})
+	$('.family-login').click(()=>{
+		window.location.href='user_home.html';
+	});
+	$('.volunteer-login').click(()=>{
+		window.location.href='http://www.google.com';
+	});
+});
