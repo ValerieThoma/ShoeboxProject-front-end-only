@@ -1,6 +1,6 @@
-////////////////////////////////////////
+/* ////////////////////////////////////////
 /////////////INDEX STYLES//////////////
-///////////////////////////////////////
+/////////////////////////////////////// */
 .parallax{
   background-image: url("../images/parallax.jpg");
   min-height: 500px; 
@@ -97,9 +97,9 @@ a:hover{
 
 
 
-////////////////////////////////////////
+/* ////////////////////////////////////////
 /////////////VOLUNTEER FORM STYLES//////////////
-///////////////////////////////////////
+/////////////////////////////////////// */
 .volunteer-form{
 	background-image: url("../inspiration/adobe-xd-1040.jpg");
 	background-repeat: no-repeat;
@@ -107,9 +107,7 @@ a:hover{
 	min-height: 100vh;
 }
 
-.signin-form{
-	min-height: 100vh;
-}
+
 
 .wrapper{
 	z-index: 5;
@@ -129,12 +127,34 @@ a:hover{
 	padding: 5px 10px 10px 10px;
 }
 
+
+/* sign in form css  begin */
 .youth-signin-form{
 	background-image: url("../inspiration/5852c52d7c378.image.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	min-height: 100vh;
 }
+
+.signin-form{
+	min-height: 100vh;
+}
+
+.volunteer-header{
+	margin: auto;
+	color: black;
+	margin: 20px 0;
+}
+
+.volunteer-signin-form{
+	background-image: url("../inspiration/16_school_class_picture.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	min-height: 100vh;
+}
+
+/* sign in form css end */
+
 
 
 .form-wrapper{
