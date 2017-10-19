@@ -2,6 +2,7 @@
 /////////////INDEX STYLES//////////////
 ///////////////////////////////////////
 .parallax{
+<<<<<<< HEAD
     /* The image used */
     background-image: url("../images/parallax.jpg");
 
@@ -37,18 +38,50 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+=======
+  background-image: url("../images/parallax.jpg");
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax-about{
+  background-image: url("../images/about.jpg");
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax-contact{
+  background-image: url("../images/contact.jpg");
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax-space{
+  background-image: url("../images/memories.jpg");
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+>>>>>>> 08815c7683e23589eec71ccabe25fd39c2f21faf
 }
 .header{
   background-color: rgba(128,128,128,0.39);
   box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
-  height: 100px;
+  height: 200px;
   width: 100vw;
   /*padding: 10px;*/
 }
 .logo{
-	height: 75px;
-	width: 100px;
-	padding: 12px;
+  height: 75px;
+  width: 100px;
+  padding: 12px;
 }
 .footer{
   background-color: rgba(128,128,128,0.39);
@@ -67,6 +100,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.nav-links{
+  font-size: 24px;
+  border: 1px solid lightgrey;
 }
 a{
   text-decoration: none;
@@ -90,6 +127,10 @@ a:hover{
   color: black;
   padding: 10px;
 }
+#about, #contact, p{
+  padding: 25px;
+}
+
 
 
 
