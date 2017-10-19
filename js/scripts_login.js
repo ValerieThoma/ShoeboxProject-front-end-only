@@ -1,19 +1,18 @@
 $(document).ready(()=>{
-	fieldsFull = false;
-	$('.sign-up-form').change(function(){
-		$('form-wrapper input').each(function(){
-			var userInput = $(this).val();
 
-			if(userInput === 'j'){
-				fieldsFull = true;
-				console.log("True!")
+		var password = $('.password').val();
+		var passwordConfirm = $('.password-confirm').val();
+
+		// add section which checks if password is correct for that email.
+		
+		$('.sign-up-form').submit((event)=>{
+			event.preventDefault();
+			var password = $('.password').val();
+			var passwordConfirm = $('.password-confirm').val();
+			if(password != passwordConfirm){
+				$('.password-error').html("Your passwords do not match.");
+			}else{
+				window.location.href = "../baby-unicorns/user_home.html"
 			}
 		});
-
-		if(fieldsFull){
-			$('.submit').addClass('btn-success');
-		}else{
-			$('.submit').addClass('btn-warning');
-		}
-	});
 });
