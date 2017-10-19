@@ -68,15 +68,20 @@ div > .agree{
 }
 
 .welcome-message{
+	padding: 30px;
 	margin: auto;
+	border: 1px solid black;
 }
 
 .shoebox{
-	position: absolute;
+	position: relative;
 	background-image: url("../images/shoebox.png");
+	background-size: 50%;
 	background-repeat: no-repeat;
-	z-index: -1;
+	/*z-index: -1;*/
 	height: 100vh;
+	border: 1px solid red;
+
 
 	/*background-size: 70%;*/
 }
@@ -87,25 +92,48 @@ div > .agree{
 	top: 0;
 	background-image: url("../images/shoebox_front.png");
 	background-repeat: no-repeat;
-	z-index: 3;
+	z-index: 10;
 	height: 100vh;
+	border: 1px solid green;
+
 
 }
 
 .user-image{
 	max-width: 30%;
-	/*z-index: 1;*/
+	/*z-index: -1;*/
+	border: 1px solid black;
+
 }
 
 .photo-choice{
 	position: absolute;
-	left: 0;
-	top: 100px;
-	z-index: 0;
+	left: 150px;
+	top: 266px;
+	z-index: 1;
+	border: 1px solid black;
+
 }
 
-.stuff-choice{
+.doc-choice{
 	z-index: 0;
 	position: absolute;
-	right: 0;
+	right: 800px;
+	border: 1px solid black;
+
+}
+.user-box{
+	max-width: 700px;
+	height: 700px;
+}
+h1{
+	text-align: center;
+	font-size: 30px;
+}
+.gallery img, .docs img{
+	height: 200px;
+	width: 300px;
+}
+.docs img{
+	padding-left: 100px;
 }
