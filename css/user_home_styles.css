@@ -1,0 +1,72 @@
+.volunteer-form{
+	background-image: url("../inspiration/adobe-xd-1040.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	min-height: 100vh;
+}
+
+.signin-form{
+	min-height: 100vh;
+}
+
+.wrapper{
+	z-index: 5;
+}
+
+.heading{
+	margin: auto;
+	color: rgba(255, 255, 255, 0.9);
+	margin: 20px 0;
+}
+
+.sign-up-form{
+	background-color: rgba(255, 255, 255, 0.95);
+	margin: auto;
+	width: 50vw;
+	border-radius: 5px;
+	padding: 5px 10px 10px 10px;
+}
+
+.youth-signin-form{
+	background-image: url("../inspiration/5852c52d7c378.image.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	min-height: 100vh;
+}
+
+
+.form-wrapper{
+	margin: 15px;
+}
+
+.form-wrapper > div{
+	display: inline-block;
+}
+
+.form-wrapper > input{
+	width: 90%;
+	display: block;
+	margin: auto;
+}
+
+#background-check{
+	max-width: 100%;
+}
+
+
+
+.interest{
+	margin: 10px;
+}
+
+.form-wrapper > .submit{
+	width: 40%;
+}
+
+div > .agree{
+	display: inline-block;
+}
+
+.welcome-message{
+	margin: auto;
+}
