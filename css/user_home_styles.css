@@ -70,3 +70,42 @@ div > .agree{
 .welcome-message{
 	margin: auto;
 }
+
+.shoebox{
+	position: absolute;
+	background-image: url("../images/shoebox.png");
+	background-repeat: no-repeat;
+	z-index: -1;
+	height: 100vh;
+
+	/*background-size: 70%;*/
+}
+
+.shoebox-front{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: url("../images/shoebox_front.png");
+	background-repeat: no-repeat;
+	z-index: 3;
+	height: 100vh;
+
+}
+
+.user-image{
+	max-width: 30%;
+	/*z-index: 1;*/
+}
+
+.photo-choice{
+	position: absolute;
+	left: 0;
+	top: 100px;
+	z-index: 0;
+}
+
+.stuff-choice{
+	z-index: 0;
+	position: absolute;
+	right: 0;
+}
