@@ -108,11 +108,6 @@ a:hover{
 }
 
 
-
-.wrapper{
-	z-index: 5;
-}
-
 .heading{
 	margin: auto;
 	color: rgba(255, 255, 255, 0.9);
@@ -129,6 +124,11 @@ a:hover{
 
 
 /* sign in form css  begin */
+
+.wrapper{
+	z-index: 5;
+	margin-top: 70px;
+}
 .youth-signin-form{
 	background-image: url("../inspiration/5852c52d7c378.image.jpg");
 	background-repeat: no-repeat;
