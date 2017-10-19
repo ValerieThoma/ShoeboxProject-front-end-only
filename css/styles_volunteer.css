@@ -41,10 +41,13 @@
 }
 
 #background-check{
-	max-width: 100%;
+	/*max-width: 100%;*/
 }
 
-
+.password-error{
+	color: red;
+	margin-left: 30px;
+}
 
 .interest{
 	margin: 10px;
