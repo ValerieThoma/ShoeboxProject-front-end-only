@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+.parallax{
+    /* The image used */
+    background-image: url("./images/parallax.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-about{
+    background-image: url("./images/about.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-contact{
+    background-image: url("./images/contact.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-space{
+    background-image: url("./images/memories.jpg");
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header{
+  background-color: rgba(128,128,128,0.39);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
+  height: 100px;
+  width: 100vw;
+  /*padding: 10px;*/
+}
+.logo{
+	height: 75px;
+	width: 100px;
+	padding: 12px;
+}
+.footer{
+  background-color: rgba(128,128,128,0.39);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
+  height: 100px;
+  width: 100vw;
+  padding: 10px;
+}
+.copyright{
+  padding: 30px;
+  text-align: center;
+}
+.nav-menu{
+  padding: 1px 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="header col-sm-12">
+	<div class="nav-bar">
+		<img class="logo" src="./images/sm-sb-logo.png"/>
+      <div class="nav-menu col-sm-offset-4">
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Volunteer</a>
+        <a href="#">Contact</a>
+        <a class="button" href="#">Donate</a>
+      </div>
+	</div>
+</div>
+<div class="parallax"></div>
+
+
+<div style="height:500px;background-color:lightgrey;font-size:24px">
+<span>About</span></br>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<div class="parallax-about"></div>
+
+<div style="height:500px;background-color:lightgrey;font-size:24px">
+  <span>Contact Us</span></br>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<div class="parallax-contact"></div>
+
+<div style="height:200px;background-color:lightgrey;font-size:24px">
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. 
+</div>
+<div class="parallax-space"></div>
+
+<footer>
+  <div class="footer col-sm-12">
+    <div class="copyright">
+      ©Shoebox Project Copyright 2017
+    </div>
+    <div class="social-media"></div>
+  </div>
+</footer>
+</body>
+</html>
+
