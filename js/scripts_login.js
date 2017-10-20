@@ -16,7 +16,21 @@ $(document).ready(()=>{
 			}
 		});
 
-		$(".btn-info").click(function(){
+		$('.youth-sign-up-form').submit((event)=>{
+			event.preventDefault();
+			var password = $('.password').val();
+			var passwordConfirm = $('.password-confirm').val();
+			if(password != passwordConfirm){
+				$('.password-error').html("Your passwords do not match.");
+			}else{
+				window.location.href = "../baby-unicorns/user_home.html"
+			}
+		});
+
+		$(".youth-btn").click(function(){
     		window.location.href = "../baby-unicorns/user_home.html"
+		});
+		$(".vol-btn").click(function(){
+    		window.location.href = "../baby-unicorns/volunteer_form.html"
 		});
 });
