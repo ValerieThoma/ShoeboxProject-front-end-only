@@ -29,8 +29,11 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&callback=initMap">
 	</script> -->
 	<script type="text/javascript">
-		console.log(counties);
+		// console.log(counties);
 		// $(document).ready(()=>{
+			$('#data-label').html(counties[counties.length - 1].county);
+			$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
+
 			var mapStyle = [{
 				'stylers': [{'visibility': 'off'}]
 				 }, {
@@ -41,7 +44,28 @@
 				'featureType': 'water',
 				'elementType': 'geometry',
 				'stylers': [{'visibility': 'on'}, {'color': '#bfd4ff'}]
-				 }];
+			}];
+// 			[
+//   {
+//     "featureType": "all",
+//     "stylers": [
+//       { "color": "#C0C0C0" }
+//     ]
+//   },{
+//     "featureType": "road.arterial",
+//     "elementType": "geometry",
+//     "stylers": [
+//       { "color": "#CCFFFF" }
+//     ]
+//   },{
+//     "featureType": "landscape",
+//     "elementType": "labels",
+//     "stylers": [
+//       { "visibility": "off" }
+//     ]
+//   }
+// ]
+				
 				 var map;
 
 				 function initMap(){
@@ -148,9 +172,11 @@
 				function mouseOutOfRegion(e) {
 					// reset the hover state, returning the border to normal
 					e.feature.setProperty('state', 'normal');
+					$('#data-label').html(counties[counties.length - 1].county);
+					$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
 				}
 
-		// })
+		// });
 
 
 
