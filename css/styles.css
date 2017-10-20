@@ -140,12 +140,18 @@ a:hover{
 	background-color: rgba(255, 255, 255, 0.95);
 	margin: auto;
 	width: 50vw;
-  height: 60vh;
+  height: 70vh;
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
 }
-
-
+.youth-sign-up-form{
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: auto;
+  width: 50vw;
+  height: 60vh;
+  border-radius: 5px;
+  padding: 5px 10px 10px 10px;
+}
 .wrapper{
 	z-index: 5;
 	margin-top: 70px;
@@ -193,6 +199,10 @@ a:hover{
 .not-a-member{
   margin: auto;
   margin-top: 30px;
+}
+
+.login-wrapper > .submit{
+  width: 40%;
 }
 
 /* sign in form css end */
