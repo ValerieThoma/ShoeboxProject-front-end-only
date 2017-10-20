@@ -5,7 +5,7 @@
 	min-height: 120vh;
 }
 
-.wrapper{
+.volunteer-wrapper{
 	background-color: rgba(255, 255, 255, 0.3);
 	height: 140vh;
 	margin-top: -20px;
@@ -26,11 +26,11 @@
 	padding: 5px 10px 10px 10px;
 }
 
-.form-wrapper{
+/*.form-wrapper{
 	margin: 15px;
-}
+}*/
 
-.form-wrapper > div{
+/*.form-wrapper > div{
 	display: inline-block;
 }
 
@@ -38,7 +38,7 @@
 	width: 90%;
 	display: block;
 	margin: 10px auto;
-}
+}*/
 
 #background-check{
 	/*max-width: 100%;*/
@@ -49,9 +49,9 @@
 	margin-left: 30px;
 }
 
-.interest{
+/*.interest{
 	margin: 10px;
-}
+}*/
 
 .form-wrapper > .submit{
 	width: 40%;

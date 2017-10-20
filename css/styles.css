@@ -253,3 +253,75 @@ div > .agree{
 
 
 /* user sign up form end */
+
+.volunteer-form{
+  background-image: url("../inspiration/adobe-xd-1040.jpg");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  min-height: 120vh;
+}
+
+.volunteer-wrapper{
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 140vh;
+  margin-top: -20px;
+}
+
+.heading{
+  margin: auto;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 20px 0;
+  padding-top: 20px;
+}
+
+.sign-up-form{
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: auto;
+  width: 50vw;
+  border-radius: 5px;
+  padding: 5px 10px 10px 10px;
+}
+
+/*.form-wrapper{
+  margin: 15px;
+}*/
+
+/*.form-wrapper > div{
+  display: inline-block;
+}
+
+.form-wrapper > input{
+  width: 90%;
+  display: block;
+  margin: 10px auto;
+}*/
+
+#background-check{
+  /*max-width: 100%;*/
+}
+
+.password-error{
+  color: red;
+  margin-left: 30px;
+}
+
+/*.interest{
+  margin: 10px;
+}*/
+
+.form-wrapper > .submit{
+  width: 40%;
+}
+
+div > input.agree{
+  display: inline-block;
+  width: 12px;
+}
+
+div > label.agree{
+  line-height: 0px;
+}
+
+.submit{
+  margin-top: 10px;
+}
