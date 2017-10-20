@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Signup Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/scripts_login.js"></script>
+</head>
+<body class="user-signup-form">
+	<div class="wrapper">
+		<h1 class="heading row text-center">User Sign Up Form</h1>
+		<form class="sign-up-form">
+		
+			<div class="form-wrapper">
+				<div class="full-name-error error"></div>
+				<label>Full name</label><input type="text" class="full-name" placeholder="Your Full Name" required>
+			</div>
+
+			<div class="form-wrapper">
+				<div class="email-error error"></div>
+				<label>Email</label><input type="email" class="email" placeholder="Your Email" required>
+			</div>
+
+			<div class="form-wrapper">
+				<div class="phone-error error"></div>
+				<label>Phone number</label><input type="tel" class="phone" placeholder="Your Phone Number">
+			</div>
+
+			<div class="form-wrapper">
+				
+				<label>Password  </label>
+				<div class="password-error error"></div>
+				<input type="password" class="password" placeholder="Your password" required>
+			</div>
+
+			<div class="form-wrapper">
+				<label>Confirm password</label><input type="password" class="password-confirm" placeholder="Confirm password" required>
+			</div>
+
+			<div class="form-wrapper">
+				<input type="submit" class="submit btn btn-primary" value="Submit">
+			</div>
+
+		</form>
+	</div>
+
+</body>
+</html>
