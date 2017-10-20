@@ -325,3 +325,13 @@ div > label.agree{
 .submit{
   margin-top: 10px;
 }
+/* ////////////////////////////////////////
+/////////////USER_HOME STYLES//////////////
+/////////////////////////////////////// */
+
+#hero{
+  background-image: url("../images/pencil-shaving.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+}
