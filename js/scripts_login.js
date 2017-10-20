@@ -15,4 +15,8 @@ $(document).ready(()=>{
 				window.location.href = "../baby-unicorns/user_home.html"
 			}
 		});
+
+		$(".btn-info").click(function(){
+    		window.location.href = "../baby-unicorns/user_home.html"
+		});
 });
