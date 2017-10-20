@@ -11,7 +11,7 @@
   background-size: cover;
 }
 .parallax-about{
-  background-image: url("../images/about.jpg");
+  background-image: url("../images/polaroids.jpg");
   min-height: 500px; 
   background-attachment: fixed;
   background-position: center;
@@ -19,7 +19,7 @@
   background-size: cover;
 }
 .parallax-contact{
-  background-image: url("../images/contact.jpg");
+  background-image: url("../images/say-cheese.jpg");
   min-height: 500px; 
   background-attachment: fixed;
   background-position: center;
@@ -27,7 +27,7 @@
   background-size: cover;
 }
 .parallax-space{
-  background-image: url("../images/memories.jpg");
+  background-image: url("../images/beach.jpg");
   min-height: 500px; 
   background-attachment: fixed;
   background-position: center;
