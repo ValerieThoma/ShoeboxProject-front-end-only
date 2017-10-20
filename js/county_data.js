@@ -163,3 +163,4 @@ counties.push(new County ("Cobb", "405"));
 // Wilkes	7
 // Wilkinson	29
 // Worth	53
+counties.push(new County("Georgia", "12650"));
