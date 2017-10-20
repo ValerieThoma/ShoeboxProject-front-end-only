@@ -31,12 +31,12 @@ counties.push(new County ("Berrien", "38"));
 // Chatham	286
 // Chattahoochee	14
 // Chattooga	19
-// Cherokee	286
+counties.push(new County ("Cherokee", "286"));
 // Clarke	237
 // Clay	0
 // Clayton	249
 // Clinch	30
-// Cobb	405
+counties.push(new County ("Cobb", "405"));
 // Coffee	142
 // Colquitt	117
 // Columbia	60

@@ -79,24 +79,27 @@
 					//   showRow = false;
 					// }
 
-					var outlineWeight = 0.5, zIndex = 1;
+					var outlineWeight = 0.5, zIndex = 1, colorOfCounty = 'rgba(0, 213, 242, 0.7)'
 					if (feature.getProperty('state') === 'hover') {
 					  outlineWeight = zIndex = 2;
+					  colorOfCounty = 'rgb(31, 148, 0)';
+					  // console.log("County!");
+					  // $('#data-label').html('555');
 					}
 
 					return {
 					  strokeWeight: outlineWeight,
 					  strokeColor: '#fff',
 					  zIndex: zIndex,
-					  fillColor: 'rgb(255, 0, 0)',
+					  fillColor: colorOfCounty,
 					  fillOpacity: 0.75,
 					  visible: true
 					};
 				}
 
 				 function loadMapShapes(){
-					map.data.loadGeoJson('http://catalog.civicdashboards.com/dataset/2381e107-5e3a-49bc-bd1d-d56bc5afaf64/resource/a4715d74-198f-479d-9399-c9cd2179f5b7/download/2f9369a52d3f4debadf271ddc4e957d9temp.geojson'
-					, { idPropertyName: 'counties'})
+					map.data.loadGeoJson('http://catalog.civicdashboards.com/dataset/2381e107-5e3a-49bc-bd1d-d56bc5afaf64/resource/a4715d74-198f-479d-9399-c9cd2179f5b7/download/2f9369a52d3f4debadf271ddc4e957d9temp.geojson')
+					// , { idPropertyName: 'counties'})
 				 }
 
 				function mouseInToRegion(e) {
@@ -107,8 +110,34 @@
 					// 	(censusMax - censusMin) * 100;
 
 					// // update the label
-					document.getElementById('data-label').textContent =
-						e.feature.getProperty('counties');
+					var countyNameFromJson = e.feature.getProperty('name');
+					var countyNameAsArray = countyNameFromJson.split(" County");
+					// console.log(countyNameAsArray);
+					var countyNameOnlyArray = countyNameAsArray.splice(0, 1);
+					// console.log(countyNameOnlyArray);
+					var countyNameOnlyString = countyNameOnlyArray.toString();
+					// console.log(countyNameOnlyString);
+
+					// counties.map(function(county, i){
+					// 	var numFosterKids = counties[0].childrenInFosterCare;
+					// 	console.log(counties[0].childrenInFosterCare);
+					// 	console.log(numFosterKids);
+					// 	document.getElementById('data-label').textContent = countyNameOnlyString;
+					// 	document.getElementById('data-value').textContent = numFosterKids;
+
+					// });
+					
+					// console.log(numFosterKids);
+					document.getElementById('data-label').textContent = countyNameOnlyString;
+					for(let i = 0; i < counties.length; i++){
+						if(counties[i].county == countyNameOnlyString){
+							document.getElementById('data-value').textContent = counties[i].childrenInFosterCare;
+						}
+					}
+					// console.log(counties)
+					// document.getElementById('data-label').textContent = countyNameOnlyString;
+					// document.getElementById('data-value').textContent = numFosterKids;				
+						
 					// document.getElementById('data-value').textContent =
 					// 	e.feature.getProperty('census_variable').toLocaleString();
 					// document.getElementById('data-box').style.display = 'block';
@@ -131,8 +160,8 @@
 <body>
 	<div id="mapper-wrapper">
 		<div id="data-box" class="nicebox">
-			<label id="data-label" for="data-value">Label</label>
-			<span id="data-value">Value</span>
+			<label id="data-label" for="data-value"></label>
+			<span id="data-value">Span here</span>
 		</div>
 
 		<div id="map" style="width: 700px; height: 700px;">
