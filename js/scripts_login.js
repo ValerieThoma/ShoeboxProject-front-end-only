@@ -12,7 +12,7 @@ $(document).ready(()=>{
 			if(password != passwordConfirm){
 				$('.password-error').html("Your passwords do not match.");
 			}else{
-				window.location.href = "../baby-unicorns/user_home.html"
+				window.location.href = "../user_home.html"
 			}
 		});
 
@@ -23,14 +23,14 @@ $(document).ready(()=>{
 			if(password != passwordConfirm){
 				$('.password-error').html("Your passwords do not match.");
 			}else{
-				window.location.href = "../baby-unicorns/user_home.html"
+				window.location.href = "../user_home.html"
 			}
 		});
 
 		$(".youth-btn").click(function(){
-    		window.location.href = "../baby-unicorns/user_home.html"
+    		window.location.href = "../user_home.html"
 		});
 		$(".vol-btn").click(function(){
-    		window.location.href = "../baby-unicorns/volunteer_form.html"
+    		window.location.href = "../volunteer_form.html"
 		});
 });
