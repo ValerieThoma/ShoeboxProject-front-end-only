@@ -1,9 +1,9 @@
 $(document).ready(()=>{
 	console.log("Connected!");
 	$('.family-login').click(()=>{
-		window.location.href='user_home.html';
+		window.location.href='youth-login-form.html';
 	});
 	$('.volunteer-login').click(()=>{
-		window.location.href='http://www.google.com';
+		window.location.href='volunteer-login-form.html';
 	});
 });
