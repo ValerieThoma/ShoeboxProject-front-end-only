@@ -240,3 +240,16 @@ a:hover{
 div > .agree{
 	display: inline-block;
 }
+
+/* User sign up form begin */
+
+.user-signup-form{
+  background-image: url("../inspiration/5852c52d7c378.image.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+}
+
+
+
+/* user sign up form end */
