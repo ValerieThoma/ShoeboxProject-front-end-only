@@ -7,36 +7,92 @@
 	<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&libraries=places" async defer></script> -->
 	<!-- <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&callback=initMap">
-    </script> -->
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&callback=initMap">
+	</script> -->
 	<script type="text/javascript">
 		// $(document).ready(()=>{
 			var mapStyle = [{
 				'stylers': [{'visibility': 'off'}]
-			 	 }, {
+				 }, {
 				'featureType': 'landscape',
 				'elementType': 'geometry',
 				'stylers': [{'visibility': 'on'}, {'color': '#fcfcfc'}]
-			 	 }, {
+				 }, {
 				'featureType': 'water',
 				'elementType': 'geometry',
 				'stylers': [{'visibility': 'on'}, {'color': '#bfd4ff'}]
-			 	 }];
-			 	 var map;
+				 }];
+				 var map;
 
-			 	 function initMap(){
-			 	 	map = new google.maps.Map(document.getElementById('map'), {
-			 	 		center: {lat: 32, lng: -84},
-			 	 		zoom: 7,
-			 	 		styles: mapStyle
-			 	 	});
+				 function initMap(){
+					map = new google.maps.Map(document.getElementById('map'), {
+						center: {lat: 32, lng: -84},
+						zoom: 7,
+						styles: mapStyle
+					});
 
-			 	 	loadMapShapes();
-			 	 }
+					loadMapShapes();
 
-			 	 function loadMapShapes(){
-			 	 	map.data.loadGeoJson('http://catalog.civicdashboards.com/dataset/2381e107-5e3a-49bc-bd1d-d56bc5afaf64/resource/a4715d74-198f-479d-9399-c9cd2179f5b7/download/2f9369a52d3f4debadf271ddc4e957d9temp.geojson', { idPropertyName: 'counties'})
-			 	 }
+					map.data.setStyle(styleFeature);
+					map.data.addListener('mouseover', mouseInToRegion);
+				 }
+
+				function styleFeature(feature) {
+					var low = [5, 69, 54];  // color of smallest datum
+					var high = [151, 83, 34];   // color of largest datum
+
+					// delta represents where the value sits between the min and max
+					var delta = (feature.getProperty('census_variable') - censusMin) /
+						(censusMax - censusMin);
+
+					var color = [];
+					for (var i = 0; i < 3; i++) {
+					  // calculate an integer color based on the delta
+					  color[i] = (high[i] - low[i]) * delta + low[i];
+					}
+
+					// determine whether to show this shape or not
+					var showRow = true;
+					if (feature.getProperty('census_variable') == null ||
+						isNaN(feature.getProperty('census_variable'))) {
+					  showRow = false;
+					}
+
+					var outlineWeight = 0.5, zIndex = 1;
+					if (feature.getProperty('state') === 'hover') {
+					  outlineWeight = zIndex = 2;
+					}
+
+					return {
+					  strokeWeight: outlineWeight,
+					  strokeColor: '#fff',
+					  zIndex: zIndex,
+					  fillColor: 'rgb(255, 0, 0)',
+					  fillOpacity: 0.75,
+					  visible: showRow
+					};
+				}
+
+				 function loadMapShapes(){
+					map.data.loadGeoJson('http://catalog.civicdashboards.com/dataset/2381e107-5e3a-49bc-bd1d-d56bc5afaf64/resource/a4715d74-198f-479d-9399-c9cd2179f5b7/download/2f9369a52d3f4debadf271ddc4e957d9temp.geojson', { idPropertyName: 'counties'})
+				 }
+
+				function mouseInToRegion(e) {
+					// set the hover state so the setStyle function can change the border
+					e.feature.setProperty('state', 'hover');
+
+					// var percent = (e.feature.getProperty('census_variable') - censusMin) /
+					// 	(censusMax - censusMin) * 100;
+
+					// // update the label
+					// document.getElementById('data-label').textContent =
+					// 	e.feature.getProperty('NAME');
+					// document.getElementById('data-value').textContent =
+					// 	e.feature.getProperty('census_variable').toLocaleString();
+					// document.getElementById('data-box').style.display = 'block';
+					// document.getElementById('data-caret').style.display = 'block';
+					// document.getElementById('data-caret').style.paddingLeft = percent + '%';
+				}
 
 		// })
 
@@ -50,7 +106,7 @@
 
 	</div>
 	<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&callback=initMap">
-    </script>
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&callback=initMap">
+	</script>
 </body>
 </html>
