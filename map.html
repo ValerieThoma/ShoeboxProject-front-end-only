@@ -31,6 +31,9 @@
 	<script type="text/javascript">
 		// console.log(counties);
 		// $(document).ready(()=>{
+			$('#data-label').html(counties[counties.length - 1].county);
+			$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
+
 			var mapStyle = [{
 				'stylers': [{'visibility': 'off'}]
 				 }, {
@@ -173,7 +176,7 @@
 					$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
 				}
 
-		// })
+		// });
 
 
 
