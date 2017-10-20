@@ -8,30 +8,35 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/scripts_login.js"></script>
 </head>
-<body class="youth-signin-form">
-	<div class="wrapper">
-		<!-- <h2 class="heading row text-center">Sign in</h2> -->
-		<form class="sign-up-form">
-			
-			<div class="form-wrapper">
-				<div class="email-error error"></div>
-				<label>Email</label><input type="email" class="email" placeholder="Your Email" required>
-			</div>
+<body>
+	<div class="youth-signin-form">
+		<div class="wrapper">
+			<form class="sign-up-form">
+				
+				<div class="login-wrapper">
+					<div class="email-error error"></div>
+					<label>Email</label><input type="email" class="email" placeholder="Your Email" required>
+				</div>
 
-			<div class="form-wrapper">
-				<div class="password-error error"></div>
-				<label>Password</label><input type="password" class="password" placeholder="Your password" required>
-			</div>
+				<div class="login-wrapper">
+					<div class="password-error error"></div>
+					<label>Password</label><input type="password" class="password" placeholder="Your password" required>
+				</div>
 
-			<div class="form-wrapper">
-				<label>Confirm password</label><input type="password" class="password-confirm" placeholder="Confirm password" required>
-			</div>
-			
-			<div class="form-wrapper login row">
-				<input type="submit" class="submit btn btn-warning" value="Login">
-			</div>
-		</form>
+				<div class="login-wrapper">
+					<label>Confirm password</label><input type="password" class="password-confirm" placeholder="Confirm password" required>
+				</div>
+				
+				<div class="login-wrapper login row col-sm-5">
+					<input type="submit" class="submit btn btn-warning" value="Login">
+				</div>
+
+				<div class="login-wrapper not-a-member col-sm-4"><label>Not a member?</label>
+					<input type="submit" class="btn btn-info btn-xs" value="click here">
+				</div>
+
+			</form>
+		</div>
 	</div>
-
 </body>
 </html>
