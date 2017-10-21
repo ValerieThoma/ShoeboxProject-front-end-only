@@ -120,7 +120,7 @@ a:hover{
 /////////////VOLUNTEER FORM STYLES//////////////
 /////////////////////////////////////// */
 .volunteer-form{
-	background-image: url("../inspiration/adobe-xd-1040.jpg");
+	background-image: url("../images/camera.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	min-height: 100vh;
@@ -129,26 +129,27 @@ a:hover{
 
 .heading{
 	margin: auto;
-	color: rgba(255, 255, 255, 0.9);
+	/*color: black;*/
 	margin: 20px 0;
 }
 
 /* sign in form css  begin */
 
 
-.sign-up-form{
+.sign-up-form, .youth-sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
 	margin: auto;
-	width: 50vw;
+	width: 700px;
+	height: 420px;
 	/*height: 70vh;*/
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
 }
-.youth-sign-up-form{
+.vol-sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
 	margin: auto;
-	width: 50vw;
-	height: 60vh;
+	width: 700px;
+	height: 670px;
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
 }
@@ -254,33 +255,33 @@ div > .agree{
 
 /* user sign up form end */
 
-.volunteer-form{
+/*.volunteer-form{
 	background-image: url("../inspiration/adobe-xd-1040.jpg");
 	background-repeat: no-repeat;
 	background-size: 110%;
 	min-height: 120vh;
-}
+}*/
 
 .volunteer-wrapper{
-	background-color: rgba(255, 255, 255, 0.3);
-	height: 140vh;
-	margin-top: -20px;
+	/*background-color: rgba(255, 255, 255, 0.3);*/
+	height: 100vh;
+	/*margin-top: -20px;*/
 }
 
-.heading{
+/*.heading{
 	margin: auto;
 	color: rgba(255, 255, 255, 0.9);
 	margin: 20px 0;
-	padding-top: 20px;
+	padding-top: 20px;*/
 }
 
-.sign-up-form{
+/*.sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
 	margin: auto;
 	width: 50vw;
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
-}
+}*/
 
 /*.form-wrapper{
 	margin: 15px;
