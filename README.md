@@ -1,23 +1,18 @@
 ## Overview:
+The Shoebox Project is a non-profit company whose purpose is to provide professional photographs and memories for children in the foster care system. We set up a site for the company, including sign-up forms, login capabilities, an interactive map, and various pages to navigate to on the site.
 
-
-
-
-**Concept:**
-*
-*
-*
-*
 
 ## Github Link:
-[AirNav]
+[The Shoebox Project](https://github.com/ValerieThoma/baby-unicorns)
 
 ## Team Members & Roles:
+* [Allyson Conrad](https://github.com/allysonc1)
+* [Valerie Jane Thoma](https://github.com/ValerieThoma)
+* [Eddie Atkinson](https://github.com/eddieatkinson)
 
 
 
-
-## What we used:
+## Technologies used:
 **Languages:**
 * JavaScript
 * HTML5
@@ -29,14 +24,8 @@
 
 **Other:**
 * Adobe XD - wireframe
-
-## Minimum Viable Product (MVP):
-
-*
-*
-
-**Stretch Goals**
-*
+* Google Maps API
+* County location data from [CivicDashboards](http://catalog.civicdashboards.com)
 
 ## Challenges & Solutions:
 
