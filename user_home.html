@@ -3,16 +3,15 @@
 <head>
 	<title>User Home Page</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!-- <link rel="stylesheet" type="text/css" href="css/user_home_styles.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/user_home.js"></script>
 
 </head>
 <body>
-<div class="user-home">	
-  <div class="user-wrapper">
+  <div class="wrapper">
     <div class="header col-sm-12">
       <div class="nav-bar">
         <a href="index.html"><img class="logo" src="./images/sm-sb-logo.png"/></a>
@@ -25,33 +24,53 @@
           </div>
       </div>
     </div>
-    <div id="hero">
-      <div class="row">
-        <div class="col-sm-12">
+    <div class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 user-gallery">
+            <div class="col-sm-3 thumbnail">
+              <a href="#"><img src="./images/focus.jpg"/></a>
+              <p>Your Image Gallery</p>
+            </div>
+            <div class="col-sm-3 col-sm-offset-1 thumbnail">
+              <a href="#"><img src="./images/pencil-shaving.jpg"/></a>
+              <p>Your documents</p>
+            </div>
+            <div class="user-profile">
+              <div id="profile">
+                <img id="profile-img" src="./images/profile-image.png" height="90" width="100"/>
+                <figcaption>Welcome, Shyla!</figcaption>
+              </div>
+              <div class="photo-upload">             
+                <label>Upload New Photos
+                  <input type="file" name="photo" class="new-gallery-item" placeholder="Choose a photo">
+                </label>
+              </div>
+              <div class="doc-upload">  
+                <label>Upload New Documents
+                  <input type="file" name="document" class="new-document-item" placeholder="Choose a file">
+                </label>
+              </div>
+            </div>
         </div>
       </div>
-    </div>
-  </div>
-   
-    
+    </div> 
 
-
-
-  <footer>
-    <div class="footer col-sm-12">
-      <a class="footer-text" href="#">FAQ</a>
-      <a class="footer-text" href="#">Resources</a>
-      <div class="copyright">
-        ©Shoebox Project Copyright 2017
+    <footer>
+      <div class="footer col-sm-12">
+        <a class="footer-text" href="#">FAQ</a>
+        <a class="footer-text" href="#">Resources</a>
+        <div class="copyright">
+          ©Shoebox Project Copyright 2017
+        </div>
+        <div class="social-media">
+          <img class="fb" src="./images/social-media/facebook-logo.svg" height="50" width="50"/>
+          <img class="twtr" src="./images/social-media/twitter-logo.svg" height="50" width="50"/>
+          <img class="ig" src="./images/social-media/instagram-logo.svg" height="50" width="50"/>
+        </div>
       </div>
-      <div class="social-media">
-        <img class="fb" src="./images/social-media/facebook-logo.svg" height="50" width="50"/>
-        <img class="twtr" src="./images/social-media/twitter-logo.svg" height="50" width="50"/>
-        <img class="ig" src="./images/social-media/instagram-logo.svg" height="50" width="50"/>
-      </div>
-    </div>
-  </footer>
-</div>
+    </footer>
+  </div>  
 
 
 </body>

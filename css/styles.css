@@ -40,7 +40,7 @@
 .header{
   background-color: rgba(128,128,128,0.8);
   box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
-  /*height: 200px;*/
+  /*height: 120px;*/
   width: 100vw;
   position: fixed;
   /*padding: 10px;*/
@@ -66,14 +66,14 @@ footer{
   text-align: center;
 }
 .nav-menu{
-  padding: 1px 25px;
+  /*padding: 1px 25px;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .nav-links{
-  font-size: 24px;
+  font-size: 18px;
   /*color: #3179AF;*/
   /*border: 1px solid lightgrey;*/
 }
@@ -328,10 +328,38 @@ div > label.agree{
 /* ////////////////////////////////////////
 /////////////USER_HOME STYLES//////////////
 /////////////////////////////////////// */
-
-#hero{
-  background-image: url("../images/pencil-shaving.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  min-height: 100vh;
+.container{
+  margin: 25px;
 }
+.user-gallery{
+  margin-top: 100px;
+  /*margin-right: 50px;*/
+}
+.user-profile{
+  float: right;
+}
+#profile{
+  margin-bottom: 30px;
+  float: right;
+}
+.hero{
+  height: 100%;
+  display: flex;
+  padding: 50px 0 100px 20px;
+  align-items: stretch;
+}
+.box{
+  padding: 5px;
+}
+input{
+  border: 1px solid grey;
+  border-radius: 90px;
+  padding: 6px;
+}
+label{
+  text-align: center;
+}
+
+
+
+
