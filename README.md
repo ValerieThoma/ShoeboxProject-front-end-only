@@ -35,7 +35,7 @@ The Shoebox Project is a non-profit company whose purpose is to provide professi
 3. Add a "donate" button for charitable-feeling site visitors.
 
 ## URL:
-[The Shoebox Project](https://www.eddiebatkinson.com/shoeboxproject)
+[The Shoebox Project](http://www.eddiebatkinson.com/shoeboxproject)
 
 ## Project History:
 10/18/2017 - Project Start
