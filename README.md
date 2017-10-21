@@ -27,14 +27,6 @@ The Shoebox Project is a non-profit company whose purpose is to provide professi
 * Google Maps API
 * County location data from [CivicDashboards](http://catalog.civicdashboards.com)
 
-## Challenges & Solutions:
-
-
-
-## Code Snippets
-
-
-
 ## Screenshots:
 
 ## Contributing:
