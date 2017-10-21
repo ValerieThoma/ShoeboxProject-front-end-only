@@ -3,7 +3,7 @@ The Shoebox Project is a non-profit company whose purpose is to provide professi
 
 
 ## Github Link:
-[The Shoebox Project](https://github.com/ValerieThoma/baby-unicorns)
+[The Shoebox Project GitHub](https://github.com/ValerieThoma/baby-unicorns)
 
 ## Team Members & Roles:
 * [Allyson Conrad](https://github.com/allysonc1)
@@ -38,10 +38,12 @@ The Shoebox Project is a non-profit company whose purpose is to provide professi
 ## Screenshots:
 
 ## Contributing:
-
+* 1. Allow project administrator (and/or volunteers) to upload photos and documents.
+* 2. Give users ability to access photos. 
+* 3. Add a "donate" button for charitable-feeling site visitors.
 
 ## URL:
-
+[The Shoebox Project](www.eddiebatkinson.com/shoeboxproject)
 
 ## Project History:
 10/18/2017 - Project Start
