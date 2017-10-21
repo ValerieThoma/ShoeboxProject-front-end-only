@@ -29,7 +29,7 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&callback=initMap">
 	</script> -->
 	<script type="text/javascript">
-		console.log(counties);
+		// console.log(counties);
 		// $(document).ready(()=>{
 			$('#data-label').html(counties[counties.length - 1].county);
 			$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
@@ -70,7 +70,7 @@
 
 				 function initMap(){
 					map = new google.maps.Map(document.getElementById('map'), {
-						center: {lat: 32, lng: -84},
+						center: {lat: 32.5, lng: -83.3},
 						zoom: 7,
 						styles: mapStyle
 					});

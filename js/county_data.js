@@ -163,7 +163,7 @@ counties.push(new County ('Wilcox', '9'));
 counties.push(new County ('Wilkes', '7'));
 counties.push(new County ('Wilkinson', '29'));
 counties.push(new County ('Worth', '53'));
-counties.push(new County ('Statewide', '12650'));
+counties.push(new County ('Statewide', '12,650'));
 
 // counties.push(new County ("Appling", "39"));
 // counties.push(new County ("Atkinson", "19"));
