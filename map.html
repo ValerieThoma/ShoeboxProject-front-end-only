@@ -4,250 +4,40 @@
 	<title></title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<style type="text/css" media="screen">
-		#mapper-wrapper{
-			position: relative;
-			/*display: inline-block;*/
-			float: left;
-		}
-		.search-box{
-			position: absolute;
-			/*display: inline-block;*/
-			float: right;
-			z-index: 1;
-			left: 125px;
-			top: 25px;
-		}
-
-		#data-box {
-			top: 10px;
-			left: 400px;
-			/*height: 45px;
-			width: 45px;*/
-			/*line-height: 45px;*/
-			position: absolute;
-			/*background-color: #FFF;*/
-			z-index: 5;
-			color: black;
-
-			/*display: none;*/
-		}
-		#data-label, #data-value{
-			/*display: block;*/
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="js/county_data.js"></script>
-	<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
-	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&libraries=places" async defer></script> -->
-	<!-- <script async defer
+	<script type="text/javascript" src="js/map.js"></script>
+	
+	<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&callback=initMap">
-	</script> -->
-	<script type="text/javascript">
-		// console.log(counties);
-		// $(document).ready(()=>{
-			
-
-			var mapStyle = [{
-				'stylers': [{'visibility': 'off'}]
-				 }, {
-				'featureType': 'landscape',
-				'elementType': 'geometry',
-				'stylers': [{'visibility': 'on'}, {'color': '#fcfcfc'}]
-				 }, {
-				'featureType': 'water',
-				'elementType': 'geometry',
-				'stylers': [{'visibility': 'on'}, {'color': '#bfd4ff'}]
-			}];
-			$(document).ready(()=>{
-				$('#data-label').html(counties[counties.length - 1].county);
-				$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
-
-				$('#county-search-form').submit(function(event){
-					event.preventDefault();
-					// console.log("Form submitted!!!!?");
-					var userSearch = $('#county-input').val()
-					// console.log(userSearch);
-
-					for(let i = 0; i < counties.length; i++){
-						if(counties[i].county == userSearch){
-							$('#data-label').html(counties[i].county);
-							$('#data-value').html(counties[i].childrenInFosterCare);
-						}
-					}
-
-			});
-
-			})
-			
-// 			[
-//   {
-//     "featureType": "all",
-//     "stylers": [
-//       { "color": "#C0C0C0" }
-//     ]
-//   },{
-//     "featureType": "road.arterial",
-//     "elementType": "geometry",
-//     "stylers": [
-//       { "color": "#CCFFFF" }
-//     ]
-//   },{
-//     "featureType": "landscape",
-//     "elementType": "labels",
-//     "stylers": [
-//       { "visibility": "off" }
-//     ]
-//   }
-// ]
-				
-				 var map;
-
-				 function initMap(){
-					map = new google.maps.Map(document.getElementById('map'), {
-						center: {lat: 32.5, lng: -83.3},
-						zoom: 7,
-						styles: mapStyle
-					});
-
-					loadMapShapes();
-
-					map.data.setStyle(styleFeature);
-					map.data.addListener('mouseover', mouseInToRegion);
-					map.data.addListener('mouseout', mouseOutOfRegion);
-				 }
-
-				function styleFeature(feature) {
-				// 	var low = [5, 69, 54];  // color of smallest datum
-				// 	var high = [151, 83, 34];   // color of largest datum
-
-					// // delta represents where the value sits between the min and max
-					// var delta = (feature.getProperty('census_variable') - censusMin) /
-					// 	(censusMax - censusMin);
-
-					// var color = [];
-					// for (var i = 0; i < 3; i++) {
-					//   // calculate an integer color based on the delta
-					//   color[i] = (high[i] - low[i]) * delta + low[i];
-					// }
-
-					// determine whether to show this shape or not
-					// var showRow = true;
-					// if (feature.getProperty('census_variable') == null ||
-					// 	isNaN(feature.getProperty('census_variable'))) {
-					//   showRow = false;
-					// }
-
-					var outlineWeight = 0.5, zIndex = 1, colorOfCounty = 'rgba(0, 213, 242, 0.7)'
-					if (feature.getProperty('state') === 'hover') {
-					  outlineWeight = zIndex = 2;
-					  colorOfCounty = 'rgb(31, 148, 0)';
-					  // console.log("County!");
-					  // $('#data-label').html('555');
-					}
-
-					return {
-					  strokeWeight: outlineWeight,
-					  strokeColor: '#fff',
-					  zIndex: zIndex,
-					  fillColor: colorOfCounty,
-					  fillOpacity: 0.75,
-					  visible: true
-					};
-				}
-
-				 function loadMapShapes(){
-					map.data.loadGeoJson('http://catalog.civicdashboards.com/dataset/2381e107-5e3a-49bc-bd1d-d56bc5afaf64/resource/a4715d74-198f-479d-9399-c9cd2179f5b7/download/2f9369a52d3f4debadf271ddc4e957d9temp.geojson')
-					// , { idPropertyName: 'counties'})
-				 }
-
-				function mouseInToRegion(e) {
-					// set the hover state so the setStyle function can change the border
-					e.feature.setProperty('state', 'hover');
-
-					// var percent = (e.feature.getProperty('census_variable') - censusMin) /
-					// 	(censusMax - censusMin) * 100;
-
-					// // update the label
-					var countyNameFromJson = e.feature.getProperty('name');
-					var countyNameAsArray = countyNameFromJson.split(" County");
-					// console.log(countyNameAsArray);
-					var countyNameOnlyArray = countyNameAsArray.splice(0, 1);
-					// console.log(countyNameOnlyArray);
-					var countyNameOnlyString = countyNameOnlyArray.toString();
-					// console.log(countyNameOnlyString);
-
-					// counties.map(function(county, i){
-					// 	var numFosterKids = counties[0].childrenInFosterCare;
-					// 	console.log(counties[0].childrenInFosterCare);
-					// 	console.log(numFosterKids);
-					// 	document.getElementById('data-label').textContent = countyNameOnlyString;
-					// 	document.getElementById('data-value').textContent = numFosterKids;
-
-					// });
-					
-					// console.log(numFosterKids);
-					document.getElementById('data-label').textContent = countyNameOnlyString;
-					for(let i = 0; i < counties.length; i++){
-						if(counties[i].county == countyNameOnlyString){
-							document.getElementById('data-value').textContent = counties[i].childrenInFosterCare;
-						}
-					}
-					// console.log(counties)
-					// document.getElementById('data-label').textContent = countyNameOnlyString;
-					// document.getElementById('data-value').textContent = numFosterKids;				
-						
-					// document.getElementById('data-value').textContent =
-					// 	e.feature.getProperty('census_variable').toLocaleString();
-					// document.getElementById('data-box').style.display = 'block';
-					// document.getElementById('data-caret').style.display = 'block';
-					// document.getElementById('data-caret').style.paddingLeft = percent + '%';
-				}
-
-				function mouseOutOfRegion(e) {
-					// reset the hover state, returning the border to normal
-					e.feature.setProperty('state', 'normal');
-					$('#data-label').html(counties[counties.length - 1].county);
-					$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
-				}
-
-		// });
-
-
-
 	</script>
 
 </head>
 <body>
-	<!-- <div class="row"> -->
-		<div id="mapper-wrapper col-sm-8">
-			<div class="search-box col-sm-3">
-				<form id="county-search-form">
-					<input id="county-input" type="text" placeholder="Enter county name">
-					<button type="submit" class="btn btn-success">Search</button>
-				</form>
-				<div class="county-name-display">
-				</div>
-				<div class="county-search-num-results">
-				</div>
+	<div id="mapper-wrapper col-sm-8">
+		<div class="search-box col-sm-3">
+			<form id="county-search-form">
+				<input id="county-input" type="text" placeholder="Enter county name">
+				<button type="submit" class="btn btn-success">Search</button>
+			</form>
+			<div class="county-name-display">
 			</div>
-			<div id="data-box" class="nicebox">
-				<label id="data-label" for="data-value"></label>
-				<div>
-				Number of kids in foster care: <span id="data-value"></span>
-				</div>
-			</div>
-
-			<div id="map" style="width: 700px; height: 700px;">
-
+			<div class="county-search-num-results">
 			</div>
 		</div>
+		<div id="data-box" class="nicebox">
+			<label id="data-label" for="data-value"></label>
+			<div>
+			Number of kids in foster care: <span id="data-value"></span>
+			</div>
+		</div>
+
+		<div id="map" style="width: 700px; height: 700px;">
+
+		</div>
 	</div>
-	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&callback=initMap">
-	</script>
 </body>
 </html>
