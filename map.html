@@ -2,21 +2,39 @@
 <html>
 <head>
 	<title></title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<style type="text/css" media="screen">
 		#mapper-wrapper{
 			position: relative;
+			/*display: inline-block;*/
+			float: left;
 		}
+		.search-box{
+			position: absolute;
+			/*display: inline-block;*/
+			float: right;
+			z-index: 1;
+			left: 125px;
+			top: 25px;
+		}
+
 		#data-box {
 			top: 10px;
-			left: 500px;
-			height: 45px;
-			width: 45px;
-			line-height: 45px;
+			left: 400px;
+			/*height: 45px;
+			width: 45px;*/
+			/*line-height: 45px;*/
 			position: absolute;
-			background-color: #FFF;
+			/*background-color: #FFF;*/
 			z-index: 5;
 			color: black;
+
 			/*display: none;*/
+		}
+		#data-label, #data-value{
+			/*display: block;*/
 		}
 	</style>
 	
@@ -31,8 +49,7 @@
 	<script type="text/javascript">
 		// console.log(counties);
 		// $(document).ready(()=>{
-			$('#data-label').html(counties[counties.length - 1].county);
-			$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
+			
 
 			var mapStyle = [{
 				'stylers': [{'visibility': 'off'}]
@@ -45,6 +62,27 @@
 				'elementType': 'geometry',
 				'stylers': [{'visibility': 'on'}, {'color': '#bfd4ff'}]
 			}];
+			$(document).ready(()=>{
+				$('#data-label').html(counties[counties.length - 1].county);
+				$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
+
+				$('#county-search-form').submit(function(event){
+					event.preventDefault();
+					// console.log("Form submitted!!!!?");
+					var userSearch = $('#county-input').val()
+					// console.log(userSearch);
+
+					for(let i = 0; i < counties.length; i++){
+						if(counties[i].county == userSearch){
+							$('#data-label').html(counties[i].county);
+							$('#data-value').html(counties[i].childrenInFosterCare);
+						}
+					}
+
+			});
+
+			})
+			
 // 			[
 //   {
 //     "featureType": "all",
@@ -184,14 +222,28 @@
 
 </head>
 <body>
-	<div id="mapper-wrapper">
-		<div id="data-box" class="nicebox">
-			<label id="data-label" for="data-value"></label>
-			<span id="data-value">Span here</span>
-		</div>
+	<!-- <div class="row"> -->
+		<div id="mapper-wrapper col-sm-8">
+			<div class="search-box col-sm-3">
+				<form id="county-search-form">
+					<input id="county-input" type="text" placeholder="Enter county name">
+					<button type="submit" class="btn btn-success">Search</button>
+				</form>
+				<div class="county-name-display">
+				</div>
+				<div class="county-search-num-results">
+				</div>
+			</div>
+			<div id="data-box" class="nicebox">
+				<label id="data-label" for="data-value"></label>
+				<div>
+				Number of kids in foster care: <span id="data-value"></span>
+				</div>
+			</div>
 
-		<div id="map" style="width: 700px; height: 700px;">
+			<div id="map" style="width: 700px; height: 700px;">
 
+			</div>
 		</div>
 	</div>
 	<script async defer
