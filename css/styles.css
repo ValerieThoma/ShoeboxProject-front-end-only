@@ -64,7 +64,7 @@
 .hidden-spacer{
 	position: absolute;
 	bottom: 0;
-	height: 159px;;
+	height: 159px;
 	visibility: hidden;
 }
 
@@ -144,8 +144,9 @@ a#volunteer-FAQ-link{
 	z-index: -1;
 }
 
+
+/* about wording */
 .shorter{
-	/* display: inline-block; */
 	max-width: 70%;
 	text-align: left;
 	padding-left: 20px;
@@ -170,19 +171,12 @@ a#volunteer-FAQ-link{
 
 /* sign in form css  begin */
 
-/*.youth-sign-up-form, .sign-up-form{
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	top: 10px;
-}*/
 
 .sign-up-form, .youth-sign-up-form, .vol-sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
 	margin: auto;
-	width: 700px;
-	height: 350px;
+	width: 60%;
+	min-height: 300px;
 	/*height: 70vh;*/
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
@@ -233,26 +227,26 @@ a#volunteer-FAQ-link{
 
 .login-wrapper{
 	margin: 15px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 .login-wrapper > div{
 	display: inline-block;
-
+	padding-bottom: 0px;
 }
 
 .login-wrapper > input{
 	width: 90%;
 	display: block;
-	margin: auto;
-}
-
-.not-a-member{
-	margin: auto;
-	margin-top: 30px;
+	margin-top: 0px;
+	padding-bottom: 0px;
 }
 
 .login-wrapper > .submit{
 	width: 40%;
+	margin-top: 0px;
+	padding-bottom: 2px;
 }
 
 /* sign in form css end */
@@ -403,9 +397,11 @@ div > label.agree{
 	padding: 50px 0 100px 20px;
 	align-items: stretch;
 }
+
 .box{
 	padding: 5px;
 }
+
 input{
 	border: .5px solid grey;
 	border-radius: 90px;
@@ -451,4 +447,6 @@ label{
 	width: 700px;
 	height: 700px;
 }
+
+
 
