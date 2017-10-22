@@ -53,11 +53,11 @@ $(document).ready(()=>{
 	$('#county-search-form').submit(function(event){
 		event.preventDefault();
 		$('#data-label').css('color', 'black');
-		var userSearch = $('#county-input').val()
+		var userSearch = $('#county-input').val();
 		// console.log(userSearch);
 		var matchFound = false
 		for(let i = 0; i < counties.length; i++){
-			if(counties[i].county == userSearch){
+			if(counties[i].county.toLowerCase() === userSearch.toLowerCase()){
 				$('#data-label').html(counties[i].county);
 				$('#data-value').html(counties[i].childrenInFosterCare);
 				matchFound = true;
