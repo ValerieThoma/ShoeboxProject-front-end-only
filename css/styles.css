@@ -14,6 +14,8 @@
 	background-size: cover;
 }
 .parallax-about{
+	position: relative;
+	z-index: -1;
 	background-image: url("../images/polaroids.jpg");
 	min-height: 500px; 
 	background-attachment: fixed;
@@ -22,6 +24,8 @@
 	background-size: cover;
 }
 .parallax-contact{
+	position: relative;
+	z-index: -1;
 	background-image: url("../images/say-cheese.jpg");
 	min-height: 500px; 
 	background-attachment: fixed;
@@ -55,6 +59,13 @@
 .FAQ-container{
 	width: 90%;
 	margin: auto;
+}
+
+.hidden-spacer{
+	position: absolute;
+	bottom: 0;
+	height: 142px;;
+	visibility: hidden;
 }
 
 footer{
