@@ -448,5 +448,12 @@ label{
 	height: 700px;
 }
 
-
+.middleOfDonate{
+	position: relative;
+	top: 205px;
+	font-size: 18px;
+	margin-left: 30px;
+	display: inline-block;
+	max-width: 70%;
+}
 
