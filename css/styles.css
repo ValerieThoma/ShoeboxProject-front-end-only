@@ -144,6 +144,12 @@ a#volunteer-FAQ-link{
 	z-index: -1;
 }
 
+.shorter{
+	/* display: inline-block; */
+	max-width: 70%;
+	text-align: left;
+	padding-left: 20px;
+}
 
 
 /* ////////////////////////////////////////
@@ -321,7 +327,7 @@ div > .agree{
 	color: rgba(255, 255, 255, 0.9);
 	margin: 20px 0;
 	padding-top: 20px;*/
-}
+
 
 /*.sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
@@ -445,3 +451,4 @@ label{
 	width: 700px;
 	height: 700px;
 }
+
