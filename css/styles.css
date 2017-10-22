@@ -156,7 +156,6 @@ a#volunteer-FAQ-link{
 	min-height: 100vh;
 }
 
-
 .heading{
 	margin: auto;
 	/*color: black;*/
@@ -177,14 +176,14 @@ a#volunteer-FAQ-link{
 	background-color: rgba(255, 255, 255, 0.95);
 	margin: auto;
 	width: 700px;
-	height: 420px;
+	height: 350px;
 	/*height: 70vh;*/
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 10px;
+	top: 20px;
 }
 .vol-sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);

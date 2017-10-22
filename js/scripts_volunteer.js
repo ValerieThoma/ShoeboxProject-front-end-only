@@ -41,7 +41,7 @@ $(document).ready(()=>{
 
 			// });
 
-			$('.sign-up-form').submit((event)=>{
+			$('.vol-sign-up-form').submit((event)=>{
 				event.preventDefault();
 				var password = $('.password').val();
 				var passwordConfirm = $('.password-confirm').val();
@@ -49,6 +49,8 @@ $(document).ready(()=>{
 					// console.log(password);
 					// console.log($('.password-confirm').val());
 					$('.password-error').html("Your passwords do not match.");
+				}else{
+					localStorage.setItem('vol-password', password);
 				}
 				// console.log(passwordConfirm);
 			});
