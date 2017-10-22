@@ -67,7 +67,7 @@ $(document).ready(()=>{
 	});
 
 	$(".youth-btn").click(function(){
-		window.location.href = "user_home.html"
+		window.location.href = "user-signup-page.html"
 	});
 	$(".vol-btn").click(function(){
 		window.location.href = "volunteer_form.html"
