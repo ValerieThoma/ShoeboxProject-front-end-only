@@ -2,9 +2,28 @@ $(document).ready(()=>{
 
 		var password = $('.password').val();
 		var passwordConfirm = $('.password-confirm').val();
+		var userCount = 0;
+		var volCount = 0;
 
-		// add section which checks if password is correct for that email.
-		
+		// // add section which checks if password is correct for that email.
+		$('.youth-sign-up-form').change(()=>{
+			userCount++;
+			console.log("Change");
+			if(userCount >= 3){
+				$('.submit').removeClass('btn-warning');
+				$('.submit').addClass('btn-success');
+				console.log("It happened!");
+			}
+		});
+		$('.sign-up-form').change(()=>{
+			volCount++;
+			console.log("Change");
+			if(volCount >= 3){
+				$('.submit').removeClass('btn-warning');
+				$('.submit').addClass('btn-success');
+				console.log("It happened!");
+			}
+		});
 		$('.sign-up-form').submit((event)=>{
 			event.preventDefault();
 			var password = $('.password').val();
@@ -33,4 +52,5 @@ $(document).ready(()=>{
 		$(".vol-btn").click(function(){
     		window.location.href = "volunteer_form.html"
 		});
-});
+	});
+// });

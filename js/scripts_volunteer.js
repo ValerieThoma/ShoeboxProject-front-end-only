@@ -1,8 +1,9 @@
 $(document).ready(()=>{
 	var fieldsFull = false;
 	var count = 0;
-	$('.sign-up-form').change(()=>{
+	$('.vol-sign-up-form').change(()=>{
 		count++;
+		// console.log("Count!!!")
 		// $('form-wrapper input').each(function(){
 		// 	var userInput = $(this).val();
 
