@@ -434,13 +434,9 @@ label{
 	border: 2px solid black;
 	padding-left: 5px;
 	border-radius: 5px;
-
-	/*display: none;*/
 }
 
 #map{
 	width: 700px;
 	height: 700px;
 }
-
-
