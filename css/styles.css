@@ -64,7 +64,7 @@
 .hidden-spacer{
 	position: absolute;
 	bottom: 0;
-	height: 142px;;
+	height: 159px;;
 	visibility: hidden;
 }
 
@@ -439,13 +439,9 @@ label{
 	border: 2px solid black;
 	padding-left: 5px;
 	border-radius: 5px;
-
-	/*display: none;*/
 }
 
 #map{
 	width: 700px;
 	height: 700px;
 }
-
-
