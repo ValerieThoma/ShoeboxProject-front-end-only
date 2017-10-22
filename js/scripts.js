@@ -1,4 +1,8 @@
 $(document).ready(()=>{
+	localStorage.setItem('user-password', 'myPassword');
+	// console.log(typeof(localStorage.getItem('password')));
+	localStorage.setItem('vol-password', 'myPassword');
+	
 	$('#myModal').on('shown.bs.modal', function () {
 		$('#myInput').focus()
 	});
