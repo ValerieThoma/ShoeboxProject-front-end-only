@@ -1,4 +1,7 @@
 $(document).ready(()=>{
+	$('#myModal').on('shown.bs.modal', function () {
+		$('#myInput').focus()
+	});
 	console.log("Connected!");
 	$('.family-login').click(()=>{
 		window.location.href='youth-login-form.html';

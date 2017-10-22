@@ -52,6 +52,11 @@
 	padding: 12px;
 }
 
+.FAQ-container{
+	width: 90%;
+	margin: auto;
+}
+
 footer{
 	background-color: rgba(128,128,128,0.8);
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
@@ -96,6 +101,10 @@ a:hover{
 	color: white;
 	cursor: pointer;
 }
+
+a#volunteer-FAQ-link{
+	color: #337AB7;
+}
 .social-media{
 	display: inline-block;
 	float: right;
@@ -112,7 +121,9 @@ a:hover{
 #about, #contact, p{
 	padding: 25px;
 }
-
+.modal-backdrop{ /*So we can access the modal*/
+	z-index: -1;
+}
 
 
 
