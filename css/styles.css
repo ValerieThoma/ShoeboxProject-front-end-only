@@ -157,8 +157,15 @@ a#volunteer-FAQ-link{
 
 /* sign in form css  begin */
 
+/*.youth-sign-up-form, .sign-up-form{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 10px;
+}*/
 
-.sign-up-form, .youth-sign-up-form{
+.sign-up-form, .youth-sign-up-form, .vol-sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
 	margin: auto;
 	width: 700px;
@@ -166,6 +173,10 @@ a#volunteer-FAQ-link{
 	/*height: 70vh;*/
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 10px;
 }
 .vol-sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
@@ -175,9 +186,12 @@ a#volunteer-FAQ-link{
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
 }
-.wrapper{
+/*.wrapper{
 	z-index: 5;
 	margin-top: 70px;
+}*/
+.youth-wrapper, .vol-log-wrapper, .volunteer-wrapper{
+	position: relative;
 }
 
 .youth-signin-form{
