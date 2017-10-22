@@ -293,7 +293,12 @@ div > .agree{
 	background-size: 100%;
 	min-height: 100vh;
 }
-
+.return-home, #home{
+	margin-top: 20px;
+}
+#home{
+	margin-left: 15px;
+}
 
 
 /* user sign up form end */
@@ -396,7 +401,7 @@ div > label.agree{
 	padding: 5px;
 }
 input{
-	border: 1px solid grey;
+	border: .5px solid grey;
 	border-radius: 90px;
 	padding: 6px;
 }
