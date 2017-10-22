@@ -395,7 +395,8 @@ label{
 	/*display: block;*/
 }
 #map{
-	/*position: absolute;*/
+	width: 700px;
+	height: 700px;
 }
 
 
