@@ -206,12 +206,13 @@ a#volunteer-FAQ-link{
 	top: 66px;
 }
 .vol-sign-up-form{
-	background-color: rgba(255, 255, 255, 0.95);
-	margin: auto;
-	width: 700px;
 	height: 670px;
-	border-radius: 5px;
-	padding: 5px 10px 10px 10px;
+}
+@media screen and (max-width: 1100px){
+	.sign-up-form, .youth-sign-up-form{
+		width: 700px;
+		height: 600px;
+	}
 }
 /*.wrapper{
 	z-index: 5;
@@ -367,7 +368,7 @@ div > .agree{
 	color: rgba(255, 255, 255, 0.9);
 	margin: 20px 0;
 	padding-top: 20px;*/
-}
+/*}*/
 
 /*.sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
@@ -418,7 +419,7 @@ div > label.agree{
 }
 
 .submit{
-	margin-top: 10px;
+	margin-top: 10px !important;
 }
 /* ////////////////////////////////////////
 /////////////USER_HOME STYLES//////////////
