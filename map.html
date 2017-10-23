@@ -20,8 +20,10 @@
 	<div id="mapper-wrapper col-sm-8">
 		<div class="search-box col-sm-3">
 			<form id="county-search-form">
-				<input id="county-input" type="text" placeholder="Enter county name">
-				<button type="submit" class="btn btn-info">Search</button>
+				<div id="bloodhound">
+					<input id="county-input" class="typeahead" type="text" placeholder="Enter county name">
+					<button type="submit" class="btn btn-info">Search</button>
+				</div>
 			</form>
 			<div class="county-name-display">
 			</div>
