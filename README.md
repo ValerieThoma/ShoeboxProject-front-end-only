@@ -51,6 +51,19 @@ function mouseInToRegion(e) {
 	}
 }
 ```
+``` javascript
+// Check inoput password against stored password
+	$('.sign-up-form').submit((event)=>{
+		event.preventDefault();
+		var password = $('.password').val();
+		var passwordConfirm = localStorage.getItem('vol-password');
+		if(password != passwordConfirm){
+			$('.password-error').html("Incorrect password.");
+		}else{
+			window.location.href = "user_home.html"
+		}
+	});
+```
 ## Screenshots:
 
 ## Contributing:
