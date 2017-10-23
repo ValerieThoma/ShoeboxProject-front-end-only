@@ -49,6 +49,8 @@ $(document).ready(()=>{
 				localStorage.setItem("fullName"+numUsers, userObj.fullName);
 				localStorage.setItem("userEmail"+numUsers, userObj.userEmail);
 				localStorage.setItem("userPhone"+numUsers, userObj.userPhone);
+
+				window.location.href = "user_home.html"
 				
 			}
 			// console.log(passwordConfirm);
