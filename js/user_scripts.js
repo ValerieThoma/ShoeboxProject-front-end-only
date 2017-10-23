@@ -1,10 +1,5 @@
 $(document).ready(()=>{
-	var fieldsFull = false;
-	var count = 0;
-	$('.user-sign-up-form').change(()=>{
-		count++;
-		console.log("user_scripts.js count ", count)
-		
+	
 		var userObj = {
 			userType :  [],
 			fullName : [],
@@ -12,13 +7,14 @@ $(document).ready(()=>{
 			userEmail : [],
 			passwd : []
 		}
-		
-		var password = $('.password').val();
-		var passwordConfirm = $('.password-confirm').val();
-		console.log("user_script.js pswd ", password)
 
 		$('.user-sign-up-form').submit((event)=>{
 			event.preventDefault();
+
+			var password = $('.password').val();
+			var passwordConfirm = $('.password-confirm').val();
+
+			var numUsers = localStorage.getItem('users-signedup')
 			
 			if(password != passwordConfirm){
 				// console.log(password);
@@ -26,7 +22,7 @@ $(document).ready(()=>{
 				$('.password-error').html("Your passwords do not match.");
 			}else{
 				console.log("passwords match")
-				var numUsers = localStorage.getItem('users-signedup')
+				
 				if(numUsers == null){
 					numUsers = 0;
 					console.log("numUsers is zero",numUsers)
@@ -34,30 +30,28 @@ $(document).ready(()=>{
 					numUsers++;
 				}
 				console.log("numUsers ",numUsers)
+				localStorage.setItem('users-signedup',numUsers)
 
 
-				userObj.userType[numUsers] = 'Family';
-				userObj.fullName[numUsers] = $('.full-name').val();
-				userObj.userPhone[numUsers] = $('.phone').val();
-				userObj.userEmail[numUsers] = $('.email').val();
-				userObj.passwd[numUsers] = $('.password').val();
+				userObj.userType= 'Family';
+				userObj.fullName = $('.full-name').val();
+				userObj.userPhone = $('.phone').val();
+				userObj.userEmail = $('.email').val();
+				userObj.passwd = $('.password').val();
 				console.log("fullName ", userObj.fullName)
 				console.log("userPhone ", userObj.userPhone);
 				console.log("userEmail ", userObj.userEmail);
 				console.log("password ", userObj.passwd);
 
 
-				localStorage.setItem('user-type-'+numUsers, userObj.userType);
-				localStorage.setItem('user-password-'+numUsers, userObj.passwd);
-				localStorage.setItem('full-name-'+numUsers, userObj.fullName);
-				localStorage.setItem('user-email-'+numUsers, userObj.userEmail);
-				localStorage.setItem('user-phone-'+numUsers, userObj.userPhone);
+				localStorage.setItem("userType"+numUsers, userObj.userType);
+				localStorage.setItem("password"+numUsers, userObj.passwd);
+				localStorage.setItem("fullName"+numUsers, userObj.fullName);
+				localStorage.setItem("userEmail"+numUsers, userObj.userEmail);
+				localStorage.setItem("userPhone"+numUsers, userObj.userPhone);
 				
 			}
 			// console.log(passwordConfirm);
 		});
-
-
 		
 	});
-});
