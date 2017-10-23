@@ -3,6 +3,12 @@ $(document).ready(()=>{
 	console.log(typeof(localStorage.getItem('user-password')));
 	localStorage.setItem('vol-password', 'myPassword');
 
+	user-password = []
+	full-name = []
+	user-email = []
+	user-phone = []
+	user-type = []
+
 	$('#myModal').on('shown.bs.modal', function () {
 		$('#myInput').focus()
 	});
