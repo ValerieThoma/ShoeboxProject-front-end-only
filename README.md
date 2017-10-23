@@ -29,6 +29,29 @@ The Shoebox Project is a non-profit company whose purpose is to provide professi
 * Google Maps API
 * County location data from [CivicDashboards](http://catalog.civicdashboards.com)
 
+## Code snippets:
+```
+function mouseInToRegion(e) {
+	// set the hover state so the setStyle function can change the border
+	e.feature.setProperty('state', 'hover');
+	$('#data-label').css('color', 'black');
+
+	// Get county name from JSON and format it to match data in counties array
+	var countyNameFromJson = e.feature.getProperty('name');
+	var countyNameAsArray = countyNameFromJson.split(" County");
+	var countyNameOnlyArray = countyNameAsArray.splice(0, 1);
+	var countyNameOnlyString = countyNameOnlyArray.toString();
+
+	// Search for county and display number of children in foster care
+	$('#data-label').text(countyNameOnlyString);
+	for(let i = 0; i < counties.length; i++){
+		if(counties[i].county == countyNameOnlyString){
+			$('#data-value').text(counties[i].childrenInFosterCare);
+		}
+	}
+}
+```
+Writing JavaScript in ReadMe
 ## Screenshots:
 
 ## Contributing:
