@@ -58,7 +58,14 @@
 .sp{
 	margin-top: 20px;
 }
-
+/*@media screen and (max-width: 1100px){
+	.center{
+		font-size: 
+	}
+}*/
+.center{
+	font-size: 24px;
+}
 .FAQ-container{
 	width: 90%;
 	margin: auto;
@@ -97,7 +104,7 @@ li{
 	align-items: center;
 }
 .nav-links{
-	/*font-size: 18px;*/
+	font-size: 24px;
 	/*color: #3179AF;*/
 	/*border: 1px solid lightgrey;*/
 	margin-bottom: 20px;
@@ -322,11 +329,11 @@ div > .agree{
 /* User sign up form begin */
 
 .user-signup-form{
-	background-image: url("../inspiration/5852c52d7c378.image.jpg");
+	background-image: url("../images/camera-faceup.jpg");
 	background-repeat: no-repeat;
-	background-size: 100%;
+	/*background-size: 100%;
 	min-height: 100vh;
-}
+*/}
 .return-home, #home{
 	margin-top: 20px;
 }
