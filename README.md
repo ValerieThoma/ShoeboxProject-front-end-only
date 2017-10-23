@@ -65,6 +65,8 @@ function mouseInToRegion(e) {
 	});
 ```
 ## Screenshots:
+![Homepage](images/screen-shots/mobile-home.jpg)
+![Map](images/screen-shots/map.png)
 
 ## Contributing:
 1. Allow project administrator (and/or volunteers) to upload photos and documents.
