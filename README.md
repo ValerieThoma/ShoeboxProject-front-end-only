@@ -52,7 +52,7 @@ function mouseInToRegion(e) {
 }
 ```
 ``` javascript
-// Check inoput password against stored password
+	// Check input password against stored password
 	$('.sign-up-form').submit((event)=>{
 		event.preventDefault();
 		var password = $('.password').val();
