@@ -192,7 +192,7 @@ a#volunteer-FAQ-link{
 	top: 10px;
 }*/
 
-.sign-up-form, .youth-sign-up-form, .vol-sign-up-form{
+.sign-up-form, .youth-sign-up-form, .vol-sign-up-form, .user-sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
 	margin: auto;
 	width: 700px;
@@ -214,6 +214,14 @@ a#volunteer-FAQ-link{
 		height: 600px;
 	}
 }
+.user-sign-up-form{
+	height: 500px;
+}
+
+h3{
+	margin-bottom: 0px;
+}
+
 /*.wrapper{
 	z-index: 5;
 	margin-top: 70px;
