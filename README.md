@@ -30,7 +30,7 @@ The Shoebox Project is a non-profit company whose purpose is to provide professi
 * County location data from [CivicDashboards](http://catalog.civicdashboards.com)
 
 ## Code snippets:
-```
+``` javascript
 function mouseInToRegion(e) {
 	// set the hover state so the setStyle function can change the border
 	e.feature.setProperty('state', 'hover');
@@ -51,7 +51,6 @@ function mouseInToRegion(e) {
 	}
 }
 ```
-Writing JavaScript in ReadMe
 ## Screenshots:
 
 ## Contributing:
