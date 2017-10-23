@@ -34,6 +34,7 @@ $(document).ready(()=>{
 	// 		window.location.href = "user_home.html"
 	// 	}
 	// });
+	// Check inoput password against stored password
 	$('.sign-up-form').submit((event)=>{
 		event.preventDefault();
 		var password = $('.password').val();
@@ -55,6 +56,7 @@ $(document).ready(()=>{
 	// 		window.location.href = "user_home.html"
 	// 	}
 	// });
+
 	$('.youth-sign-up-form').submit((event)=>{
 		event.preventDefault();
 		var password = $('.password').val();

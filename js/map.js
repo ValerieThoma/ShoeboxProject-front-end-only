@@ -31,11 +31,12 @@ function loadMapShapes(){
 
 function styleFeature(feature) {
 	var outlineWeight = 0.5, zIndex = 1, colorOfCounty = 'rgba(0, 213, 242, 0.7)'
+	// Make county display change when hovered over
 	if (feature.getProperty('state') === 'hover') {
 		outlineWeight = zIndex = 2;
 		colorOfCounty = 'rgb(31, 148, 0)';
 	}
-
+	// County overlay display
 	return {
 	  strokeWeight: outlineWeight,
 	  strokeColor: '#fff',
@@ -47,6 +48,7 @@ function styleFeature(feature) {
 }
 
 $(document).ready(()=>{
+	// Start with statewide data in display
 	$('#data-label').html(counties[counties.length - 1].county);
 	$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
 
@@ -54,8 +56,8 @@ $(document).ready(()=>{
 		event.preventDefault();
 		$('#data-label').css('color', 'black');
 		var userSearch = $('#county-input').val();
-		// console.log(userSearch);
 		var matchFound = false
+		// Check for match, ignoring case
 		for(let i = 0; i < counties.length; i++){
 			if(counties[i].county.toLowerCase() === userSearch.toLowerCase()){
 				$('#data-label').html(counties[i].county);
@@ -63,6 +65,7 @@ $(document).ready(()=>{
 				matchFound = true;
 			}
 		}
+		// If no matching counties...
 		if(!matchFound){
 			$('#data-label').css('color', 'red');
 			$('#data-label').html("No counties match your search.");
@@ -78,12 +81,13 @@ function mouseInToRegion(e) {
 	e.feature.setProperty('state', 'hover');
 	$('#data-label').css('color', 'black');
 
-	// // update the label
+	// Get county name from JSON and format it to match data in counties array
 	var countyNameFromJson = e.feature.getProperty('name');
 	var countyNameAsArray = countyNameFromJson.split(" County");
 	var countyNameOnlyArray = countyNameAsArray.splice(0, 1);
 	var countyNameOnlyString = countyNameOnlyArray.toString();
 
+	// Search for county and display number of children in foster care
 	$('#data-label').text(countyNameOnlyString);
 	for(let i = 0; i < counties.length; i++){
 		if(counties[i].county == countyNameOnlyString){
@@ -95,6 +99,7 @@ function mouseInToRegion(e) {
 function mouseOutOfRegion(e) {
 	// reset the hover state, returning the border to normal
 	e.feature.setProperty('state', 'normal');
+	// When not hovering on county, display statewide data
 	$('#data-label').html(counties[counties.length - 1].county);
 	$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
 }
