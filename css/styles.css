@@ -160,8 +160,8 @@ a#volunteer-FAQ-link{
 .volunteer-form{
 	background-image: url("../images/camera.png");
 	background-repeat: no-repeat;
-	background-size: 100%;
-	min-height: 100vh;
+	/*background-size: 100%;
+	min-height: 100vh;*/
 }
 
 .heading{
@@ -191,7 +191,7 @@ a#volunteer-FAQ-link{
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 20px;
+	top: 66px;
 }
 .vol-sign-up-form{
 	background-color: rgba(255, 255, 255, 0.95);
@@ -214,12 +214,11 @@ a#volunteer-FAQ-link{
 	/*background-position: top left;
 }*/
 @media screen and (max-width: 1100px){
-	.test-height{
-	background-image: url("../inspiration/5852c52d7c378.image.jpg");
-	background-repeat: no-repeat;
+	.responsive-height{
+	/*background-image: url("../inspiration/5852c52d7c378.image.jpg");*/
+	/*background-repeat: no-repeat;*/
 	background-size: auto 100%;
 	min-height: 100vh;
-	/*min-width: 100vw;*/
 	background-position: top left;
 	}
 }
@@ -228,16 +227,16 @@ a#volunteer-FAQ-link{
 	height: 100%;
 }
 
-/*.youth-signin-form{
+.youth-signin-form{
 	background-image: url("../inspiration/5852c52d7c378.image.jpg");
 	background-repeat: no-repeat;
-	background-size: 100%;
-	min-height: 100vh;
-}*/
+	/*background-size: 100%;
+	min-height: 100vh;*/
+}
 @media screen and (min-width: 1100px){
-	.youth-signin-form{
-	background-image: url("../inspiration/5852c52d7c378.image.jpg");
-	background-repeat: no-repeat;
+	.responsive-height{
+	/*background-image: url("../inspiration/5852c52d7c378.image.jpg");*/
+	/*background-repeat: no-repeat;*/
 	background-size: 100%;
 	min-height: 100vh;
 	}
@@ -256,8 +255,8 @@ a#volunteer-FAQ-link{
 .volunteer-signin-form{
 	background-image: url("../images/equipment.jpg");
 	background-repeat: no-repeat;
-	background-size: 100%;
-	min-height: 100vh;
+	/*background-size: 100%;
+	min-height: 100vh;*/
 }
 
 .login-wrapper{
