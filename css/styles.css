@@ -50,10 +50,13 @@
 	/*padding: 10px;*/
 }
 .logo{
-	/*height: 75px;*/
+	margin-top: 20px;
 	min-width: 50px;
-	width: 170px;
+	width: 100px;
 	padding: 12px;
+}
+.sp{
+	margin-top: 20px;
 }
 
 .FAQ-container{
@@ -77,8 +80,13 @@ footer{
 	bottom:0;
 	left:0; 
 }
+ul{
+	padding: 5px;
+}
+li{
+	list-style-type: none;
+}
 .copyright{
-	padding: 20px;
 	text-align: center;
 }
 .nav-menu{
@@ -444,4 +452,11 @@ label{
 #map{
 	width: 700px;
 	height: 700px;
+}
+
+/* ////////////////////////////////////////
+//////////////////BLOG/////////////////////
+/////////////////////////////////////// */
+.blog{
+	padding: 200px;
 }
