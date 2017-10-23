@@ -46,27 +46,51 @@ $(document).ready(()=>{
 		}
 	});
 
+
+
+	$('.youth-sign-up-form').submit((event)=>{
+		event.preventDefault();
+
+		var userObj = {
+			userType :  [],
+			fullName : [],
+			userPhone : [],
+			userEmail : [],
+			passwd : []
+		}
+
+		var numUsers = localStorage.getItem('users-signedup')
+		var enteredEmail = $('.email').val();
+
+		for (i=0; i < numUsers+1; i++){
+			userObj.userType = localStorage.getItem('type'+i)
+			userObj.passwd = localStorage.getItem('password'+i)
+			userObj.userEmail = localStorage.getItem('userEmail'+i)
+			userObj.fullName = localStorage.getItem('fullName'+i)
+			userObj.userPhone = localStorage.getItem('userPhone'+i)
+
+			if (enteredEmail == userObj.userEmail){
+				var enteredPassword = $('.password').val();
+				if (enteredPassword != userObj.passwd){
+					$('.password-error').html("Incorrect password.");
+				}else{
+					window.location.href = "user_home.html"
+				}
+			}
+		}
+	});
+	
+
 	// $('.youth-sign-up-form').submit((event)=>{
 	// 	event.preventDefault();
 	// 	var password = $('.password').val();
-	// 	var passwordConfirm = $('.password-confirm').val();
+	// 	var passwordConfirm = localStorage.getItem('user-password');
 	// 	if(password != passwordConfirm){
 	// 		$('.password-error').html("Incorrect password.");
 	// 	}else{
 	// 		window.location.href = "user_home.html"
 	// 	}
 	// });
-
-	$('.youth-sign-up-form').submit((event)=>{
-		event.preventDefault();
-		var password = $('.password').val();
-		var passwordConfirm = localStorage.getItem('user-password');
-		if(password != passwordConfirm){
-			$('.password-error').html("Incorrect password.");
-		}else{
-			window.location.href = "user_home.html"
-		}
-	});
 
 	$(".youth-btn").click(function(){
 		window.location.href = "user-signup-page.html"

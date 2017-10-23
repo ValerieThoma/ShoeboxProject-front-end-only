@@ -138,6 +138,9 @@ p{
 	.footer-text,.copyright{
 		font-size: 18px;
 	}
+	.logo{
+		width: 70px;
+	}
 }
 @media screen and (min-width: 1100px){
 	.center{
