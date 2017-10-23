@@ -46,16 +46,7 @@ $(document).ready(()=>{
 		}
 	});
 
-	// $('.youth-sign-up-form').submit((event)=>{
-	// 	event.preventDefault();
-	// 	var password = $('.password').val();
-	// 	var passwordConfirm = $('.password-confirm').val();
-	// 	if(password != passwordConfirm){
-	// 		$('.password-error').html("Incorrect password.");
-	// 	}else{
-	// 		window.location.href = "user_home.html"
-	// 	}
-	// });
+	
 
 	$('.youth-sign-up-form').submit((event)=>{
 		event.preventDefault();
