@@ -46,10 +46,25 @@ $(document).ready(()=>{
 		}
 	});
 
-	
+
 
 	$('.youth-sign-up-form').submit((event)=>{
 		event.preventDefault();
+		
+		var userObj = {
+			userType :  [],
+			fullName : [],
+			userPhone : [],
+			userEmail : [],
+			passwd : []
+		}
+
+		var numUsers = localStorage.getItem('users-signedup')
+		var userEmail = $('.email').val();
+		for (i=0; i < users-signedup+1; i++){
+			
+
+		}
 		var password = $('.password').val();
 		var passwordConfirm = localStorage.getItem('user-password');
 		if(password != passwordConfirm){
@@ -58,6 +73,18 @@ $(document).ready(()=>{
 			window.location.href = "user_home.html"
 		}
 	});
+	
+
+	// $('.youth-sign-up-form').submit((event)=>{
+	// 	event.preventDefault();
+	// 	var password = $('.password').val();
+	// 	var passwordConfirm = localStorage.getItem('user-password');
+	// 	if(password != passwordConfirm){
+	// 		$('.password-error').html("Incorrect password.");
+	// 	}else{
+	// 		window.location.href = "user_home.html"
+	// 	}
+	// });
 
 	$(".youth-btn").click(function(){
 		window.location.href = "user-signup-page.html"
