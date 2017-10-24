@@ -30,6 +30,7 @@ The Shoebox Project is a non-profit company whose purpose is to provide professi
 * County location data from [CivicDashboards](http://catalog.civicdashboards.com)
 
 ## Code snippets:
+County data displayed when hovered...
 ``` javascript
 function mouseInToRegion(e) {
 	// set the hover state so the setStyle function can change the border
@@ -51,6 +52,52 @@ function mouseInToRegion(e) {
 	}
 }
 ```
+...and when searched.
+``` javascript
+	// Start with statewide data in display
+	$('#data-label').html(counties[counties.length - 1].county);
+	$('#data-value').html(counties[counties.length - 1].childrenInFosterCare);
+
+	$('#county-search-form').submit(function(event){
+		event.preventDefault();
+		$('#data-label').css('color', 'black');
+		var userSearch = $('#county-input').val();
+		var matchFound = false
+		// Check for match, ignoring case
+		for(let i = 0; i < counties.length; i++){
+			if(counties[i].county.toLowerCase() === userSearch.toLowerCase()){
+				$('#data-label').html(counties[i].county);
+				$('#data-value').html(counties[i].childrenInFosterCare);
+				matchFound = true;
+				var fullNameOfJsonCounty = counties[i].county + ' County, GA';
+			}
+		}
+		// If no matching counties...
+		if(!matchFound){
+			$('#data-label').css('color', 'red');
+			$('#data-label').html("No counties match your search.");
+			$('#data-value').html("");
+		}
+	});
+
+	// Autocomplete
+	// Build array to search
+	var countyNames = [];
+		for(let i = 0; i < counties.length; i++){
+			countyNames.push(counties[i].county);
+		}
+
+	// Search to enable automplete
+	$( "#county-input" ).autocomplete({
+	  source: function( request, response ) {
+	          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex(request.term), "i");
+	          response( $.grep( countyNames, function( item ){
+	              return matcher.test( item );
+	          }) );
+	      }
+	});
+```
+Local storage used for authentication 
 ``` javascript
 $(document).ready(()=>{
 
@@ -161,8 +208,13 @@ sh awscript
 ![Homepage](images/screen-shots/mobile-home.jpg)
 ![Map](images/screen-shots/map.png)
 ![Forms](images/screen-shots/volunteer_form.jpg)
+Landing page wireframe created in Adobe XD
 ![Wireframes](images/screen-shots/LandingPageWeb1920.png)
+Landing page on mobile, desired layout though not fully realized. 
 ![Wireframes](images/screen-shots/iPhone67.png)
+![Wireframes](images/screen-shots/landing_page_small.png)
+Mobile layout still in testing stages
+
 
 ## Contributing:
 1. Allow project administrator (and/or volunteers) to upload photos and documents.

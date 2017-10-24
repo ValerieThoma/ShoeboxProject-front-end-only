@@ -64,13 +64,6 @@ $(document).ready(()=>{
 				$('#data-value').html(counties[i].childrenInFosterCare);
 				matchFound = true;
 				var fullNameOfJsonCounty = counties[i].county + ' County, GA';
-				// L.geoJSON('http://catalog.civicdashboards.com/dataset/2381e107-5e3a-49bc-bd1d-d56bc5afaf64/resource/a4715d74-198f-479d-9399-c9cd2179f5b7/download/2f9369a52d3f4debadf271ddc4e957d9temp.geojson', {
-				// 	style: function(feature){
-				// 		switch(feature.properties.name){
-				// 			case fullNameOfJsonCounty: return {color: '#000'};
-				// 		}
-				// 	}
-				// }).addTo(map);
 			}
 		}
 		// If no matching counties...
