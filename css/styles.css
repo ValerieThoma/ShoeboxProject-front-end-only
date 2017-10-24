@@ -4,6 +4,7 @@
 .wrapper{
 	margin-top: 0 !important;
 	position: relative;
+	height: 100%;
 }
 .parallax{
 	background-image: url("../images/parallax.jpg");
@@ -48,6 +49,7 @@
 	width: 100vw;
 	position: fixed;
 	/*padding: 10px;*/
+	top: 0;
 }
 .logo{
 	margin-top: 20px;
@@ -440,36 +442,28 @@ div > label.agree{
 /////////////USER_HOME STYLES//////////////
 /////////////////////////////////////// */
 .container{
-	margin: 25px;
+	margin: 100px;
+	width: 100vw;
 }
-.user-gallery{
-	margin-top: 100px;
-	/*margin-right: 50px;*/
+
+h1 > .profile-pic{
+	max-width: 100px;
+	padding: 0 10px;
 }
-.user-profile{
-	float: right;
+/*//////FOR CAROUSEL//////*/
+.thumbnail {
+	max-width: 50%;
+	margin: auto;
+	margin-bottom:6px;
 }
-#profile{
-	margin-bottom: 30px;
-	float: right;
+
+.carousel-control.left,.carousel-control.right{
+  background-image:none;
+  margin-top:10%;
+  width:5%;
 }
-.hero{
-	height: 100vh;
-	display: flex;
-	padding: 50px 0 100px 20px;
-	align-items: stretch;
-}
-.box{
-	padding: 5px;
-}
-input{
-	border: .5px solid grey;
-	border-radius: 90px;
-	padding: 6px;
-}
-label{
-	text-align: center;
-}
+
+
 
 /* ////////////////////////////////////////
 //////////////////MAP/////////////////////

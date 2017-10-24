@@ -2,12 +2,16 @@
 <html>
 <head>
 	<title>User Home Page</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/user_home.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="js/user_home.js"></script>
 
 </head>
 <body>
@@ -16,47 +20,79 @@
       <div class="nav-bar">
         <a href="index.html"><img class="logo" src="./images/sm-sb-logo.png"/></a>
         <a href="index.html"><img class="sp" src="./images/logo-lettering/sb-lettering_white.png" height="50" width="170"/></a>
-          <div class="nav-menu col-sm-offset-4">
+          <!-- <div class="nav-menu col-sm-offset-4">
             <a class="nav-links" href="index.html#about">About</a>
             <a class="nav-links" href="blog.html">Blog</a>
             <a class="nav-links" href="volunteer_form.html">Volunteer</a>
             <a class="nav-links" href="index.html#contact">Contact</a>
             <a class="nav-links" href="https://stripe.com" target="_blank">Donate</a>
-          </div>
+          </div> -->
       </div>
     </div>
-    <div class="hero">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 user-gallery">
-            <div class="col-sm-3 thumbnail">
-              <a href="#"><img src="./images/focus.jpg"/></a>
-              <p>Your Image Gallery</p>
+<div class="container">
+  <div class="row">
+    <span class="center"><h3>Welcome, Shyla!</h3></span>
+    <h1> <img class='profile-pic' src="./images/profile-image.png"> My Gallery </h1>
+        <hr>  
+    <div class="row">           
+        <div class="col-12">
+          <a title="Image 1" href="#"> 
+            <img class="thumbnail img-responsive" id="image-1" src="./images/focus.jpg">
+          </a>
+        </div>
+    </div> <!-- end row -->
+    <hr>   
+  </div> <!-- end row -->
+
+  <div class="hidden" id="img-repo">
+    
+    <!-- #image-1 -->
+    <div class="item" id="image-1">
+      <img class="thumbnail img-responsive" title="" src="./images/sand.jpg">
+    </div>
+    <div class="item" id="image-1">
+      <img class="thumbnail img-responsive" title="" src="./images/bike.jpg">
+    </div> 
+    <div class="item" id="image-1">
+      <img class="thumbnail img-responsive" title="" src="./images/balloon.jpg">
+    </div>
+    <div class="item" id="image-1">
+      <img class="thumbnail img-responsive" title="" src="./images/pattycake.jpg">
+    </div> 
+    <div class="item" id="image-1">
+      <img class="thumbnail img-responsive" title="" src="./images/bubbles.jpg">
+    </div> 
+    <div class="item" id="image-1">
+      <img class="thumbnail img-responsive" title="" src="./images/giggles.jpg">
+    </div> <div class="item" id="image-1">
+      <img class="thumbnail img-responsive" title="" src="./images/beach-sunset.jpg">
+    </div>   
+  </div>  <!-- close hidden -->
+
+<div class="modal" id="modal-gallery" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button class="close" type="button" data-dismiss="modal">×</button>
+          <h3 class="modal-title"></h3>
+      </div>
+      <div class="modal-body">
+          <div id="modal-carousel" class="carousel">
+   
+            <div class="carousel-inner">           
             </div>
-            <div class="col-sm-3 col-sm-offset-1 thumbnail">
-              <a href="#"><img src="./images/pencil-shaving.jpg"/></a>
-              <p>Your documents</p>
-            </div>
-            <div class="user-profile">
-              <div id="profile">
-                <img id="profile-img" src="./images/profile-image.png" height="90" width="100"/>
-                <figcaption>Welcome, Shyla!</figcaption>
-              </div>
-              <div class="photo-upload">             
-                <label>Upload New Photos
-                  <input type="file" name="photo" class="new-gallery-item">
-                </label>
-              </div>
-              <div class="doc-upload">  
-                <label>Upload New Documents
-                  <input type="file" name="document" class="new-document-item">
-                </label>
-              </div>
-            </div>
+            
+            <a class="carousel-control left" href="#modal-carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="carousel-control right" href="#modal-carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+            
           </div>
       </div>
-    </div> 
-
+      <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
     <footer>
         <div class="footer col-sm-12">
           <ul>
@@ -77,9 +113,7 @@
           </div>
       </div>
     </footer>
-  </div>  
- 
-
-
+  </div>
+</div>   
 </body>
 </html>
