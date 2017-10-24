@@ -63,8 +63,10 @@ $(document).ready(()=>{
 		var numUsers = localStorage.getItem('users-signedup')
 		console.log("numUsers", numUsers)
 		var enteredEmail = $('.email').val();
+		console.log("enteredEmail", enteredEmail)
 
-		for (i=0; i < numUsers; i++){
+		for (i=0; i <= numUsers; i++){
+
 			userObj.userType = localStorage.getItem('type'+i)
 			userObj.passwd = localStorage.getItem('password'+i)
 			userObj.userEmail = localStorage.getItem('userEmail'+i)
@@ -72,7 +74,7 @@ $(document).ready(()=>{
 			userObj.userPhone = localStorage.getItem('userPhone'+i)
 			userObj.signupDate = localStorage.getItem('signupDate'+i)
 
-		console.log("enteredEmail", enteredEmail, "userObj.userEmail", userObj.userEmail)
+		console.log("userObj.userEmail", userObj.userEmail)
 			if (enteredEmail == userObj.userEmail){
 				var enteredPassword = $('.password').val();
 		console.log("enteredPassword", enteredPassword)
@@ -80,9 +82,11 @@ $(document).ready(()=>{
 					console.log(" != timesSubmitIsRun", timesSubmitIsRun)
 					$('.password-error').html("Incorrect password.");
 				}else{
-					 console.log(" == timesSubmitIsRun", timesSubmitIsRun)
+					console.log(" == timesSubmitIsRun", timesSubmitIsRun)
 					window.location.href = "user_home.html"
 				}
+			}else{
+				$('.password-error').html("Unknown or incorrect email address");
 			}
 		}
 	});
