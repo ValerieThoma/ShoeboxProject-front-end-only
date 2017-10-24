@@ -17,4 +17,23 @@ $(document).ready(()=>{
 		event.preventDefault();
 		window.open("map.html", "_blank", "toolbar=yes,scrollbar=yes,resizeable=yes,top=55,left=75,width=700,height=700");
 	});
+
+	// Scrollspy attempt
+	// $('body').scrollspy({target: ".navbar", offset: 50});
+
+	// $('#bs-example-navbar-collapse-1 a').on('click', function(event) {
+	// 	console.log("Didoen!")
+	// 	if(this.hash !== ""){
+	// 		event.preventDefault();
+
+	// 		var hash = this.hash;
+
+	// 		$('html, body').animate({
+	// 			scrollTop: $(hash).offset().top
+	// 		}, 800, function(){
+	// 			window.location.hash = hash;
+	// 		});
+	// 	}
+	// });
+	
 });
