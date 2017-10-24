@@ -82,6 +82,11 @@ footer{
 	bottom: 0;
 	left: 0; 
 }
+.footer{
+	padding-right: 0!important;
+	padding-left: 0!important;
+	width: 100vw;
+}
 ul{
 	padding: 5px;
 }

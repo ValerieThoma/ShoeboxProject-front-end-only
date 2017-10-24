@@ -9,7 +9,7 @@ The Shoebox Project is a non-profit company whose purpose is to provide professi
 * [Allyson Conrad](https://github.com/allysonc1)
 **Scrum Master/Birthday Girl/Developer**
 * [Valerie Jane Thoma](https://github.com/ValerieThoma)
-**Designer/Clown/Developer**
+**Designer/Class Clown/Developer**
 * [Eddie Atkinson](https://github.com/eddieatkinson)
 **Data Wrangler/Map Magician/Developer**
 
@@ -67,6 +67,9 @@ function mouseInToRegion(e) {
 ## Screenshots:
 ![Homepage](images/screen-shots/mobile-home.jpg)
 ![Map](images/screen-shots/map.png)
+![Forms](images/screen-shots/volunteer_form.jpg)
+![Wireframes](images/screen-shots/LandingPageWeb1920.png)
+![Wireframes](images/screen-shots/iPhone67.png)
 
 ## Contributing:
 1. Allow project administrator (and/or volunteers) to upload photos and documents.
