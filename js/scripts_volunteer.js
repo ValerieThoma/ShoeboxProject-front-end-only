@@ -113,7 +113,9 @@ $(document).ready(()=>{
 			localStorage.setItem("userPhone"+numUsers, userObj.userPhone);
 			localStorage.setItem("signupDate"+numUsers, userObj.signupDate);
 
-			window.location.href = "user_home.html"
+			// window.location.href = "user_home.html"
+			$('.password-error').html("You just logged in to the volunteer page!");
+
 			
 		}
 

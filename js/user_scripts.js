@@ -36,19 +36,11 @@ $(document).ready(()=>{
 				console.log("numUsers ",numUsers)
 				localStorage.setItem('users-signedup',numUsers)
 
-
 				userObj.userType= 'Family';
 				userObj.fullName = $('.full-name').val();
 				userObj.userPhone = $('.phone').val();
 				userObj.userEmail = $('.email').val();
 				userObj.passwd = $('.password').val();
-				
-
-				console.log("fullName ", userObj.fullName)
-				console.log("userPhone ", userObj.userPhone);
-				console.log("userEmail ", userObj.userEmail);
-				console.log("password ", userObj.passwd);
-
 
 				localStorage.setItem("userType"+numUsers, userObj.userType);
 				localStorage.setItem("password"+numUsers, userObj.passwd);
@@ -60,7 +52,6 @@ $(document).ready(()=>{
 				window.location.href = "user_home.html"
 				
 			}
-			// console.log(passwordConfirm);
 		});
 		
 	});

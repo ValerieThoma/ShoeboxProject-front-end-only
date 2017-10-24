@@ -113,6 +113,8 @@ li{
 .login{
 	float: right;
 	margin-top: 15px;
+	padding-right: 20px;
+	padding-top: 10px;
 }
 
 .volunteer-login{
@@ -518,6 +520,7 @@ h1 > .profile-pic{
   margin-top:10%;
   width:5%;
 }
+
 
 
 
