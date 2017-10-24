@@ -497,8 +497,8 @@ div > label.agree{
 /* ////////////////////////////////////////
 /////////////USER_HOME STYLES//////////////
 /////////////////////////////////////// */
-.user-wrapper{
-	max-height: 100vh;
+.user-background{
+	
 }
 .container{
 	margin: 100px;
@@ -520,7 +520,10 @@ h1 > .profile-pic{
   margin-top:10%;
   width:5%;
 }
-
+/*.user-footer{
+	position: absolute;
+	bottom: 0;
+}*/
 
 
 
