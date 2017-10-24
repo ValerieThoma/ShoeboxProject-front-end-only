@@ -4,18 +4,21 @@ $(document).ready(()=>{
 	var passwordConfirm = $('.password-confirm').val();
 	var userCount = 0;
 	var volCount = 0;
+	var timesSubmitIsRun = 0;
 
-	// // add section which checks if password is correct for that email.
-	$('.youth-sign-up-form').change(()=>{
+	// change color of button when the password input box is focused in
+
+	$('.youth-sign-up-form').focusin(()=>{
 		userCount++;
-		console.log("Change");
+		console.log("Change", userCount);
 		if(userCount >= 2){
 			$('.submit').removeClass('btn-warning');
 			$('.submit').addClass('btn-success');
 			console.log("It happened!");
 		}
 	});
-	$('.sign-up-form').change(()=>{
+
+	$('.sign-up-form').focusin(()=>{
 		volCount++;
 		console.log("Change");
 		if(volCount >= 2){
@@ -24,19 +27,14 @@ $(document).ready(()=>{
 			console.log("It happened!");
 		}
 	});
-	// $('.sign-up-form').submit((event)=>{
-	// 	event.preventDefault();
-	// 	var password = $('.password').val();
-	// 	var passwordConfirm = $('.password-confirm').val();
-	// 	if(password != passwordConfirm){
-	// 		$('.password-error').html("Your passwords do not match.");
-	// 	}else{
-	// 		window.location.href = "user_home.html"
-	// 	}
-	// });
-	// Check inoput password against stored password
+	
+
+
+	// Check input email/password against stored email/password
+
 	$('.sign-up-form').submit((event)=>{
 		event.preventDefault();
+		console.log("volunteer form submitted")
 		var password = $('.password').val();
 		var passwordConfirm = localStorage.getItem('vol-password');
 		if(password != passwordConfirm){
@@ -46,39 +44,53 @@ $(document).ready(()=>{
 		}
 	});
 
-
+	// Check input email/password against stored email/password
 
 	$('.youth-sign-up-form').submit((event)=>{
 		event.preventDefault();
+		console.log("user form submitted")
+		timesSubmitIsRun++;
 
 		var userObj = {
 			userType :  [],
 			fullName : [],
 			userPhone : [],
 			userEmail : [],
-			passwd : []
+			passwd : [],
+			signupDate : []
 		}
 
 		var numUsers = localStorage.getItem('users-signedup')
+		console.log("numUsers", numUsers)
 		var enteredEmail = $('.email').val();
+		console.log("enteredEmail", enteredEmail)
 
-		for (i=0; i < numUsers+1; i++){
+		for (i=0; i <= numUsers; i++){
+
 			userObj.userType = localStorage.getItem('type'+i)
 			userObj.passwd = localStorage.getItem('password'+i)
 			userObj.userEmail = localStorage.getItem('userEmail'+i)
 			userObj.fullName = localStorage.getItem('fullName'+i)
 			userObj.userPhone = localStorage.getItem('userPhone'+i)
+			userObj.signupDate = localStorage.getItem('signupDate'+i)
 
+		console.log("userObj.userEmail", userObj.userEmail)
 			if (enteredEmail == userObj.userEmail){
 				var enteredPassword = $('.password').val();
+		console.log("enteredPassword", enteredPassword)
 				if (enteredPassword != userObj.passwd){
+					console.log(" != timesSubmitIsRun", timesSubmitIsRun)
 					$('.password-error').html("Incorrect password.");
 				}else{
+					console.log(" == timesSubmitIsRun", timesSubmitIsRun)
 					window.location.href = "user_home.html"
 				}
+			}else{
+				$('.password-error').html("Unknown or incorrect email address");
 			}
 		}
 	});
+	console.log("timesSubmitIsRun", timesSubmitIsRun)
 	
 
 	// if not a current user, button redirects to the signup page
