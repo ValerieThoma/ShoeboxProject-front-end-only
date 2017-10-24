@@ -130,7 +130,8 @@ $(document).ready(()=>{
 					$('.password-error').html("Incorrect password.");
 				}else{
 					console.log(" == timesSubmitIsRun", timesSubmitIsRun)
-					//window.location.href = "user_home.html"
+					window.location.href = "user_home.html"
+					break;
 				}
 
 			}else{
