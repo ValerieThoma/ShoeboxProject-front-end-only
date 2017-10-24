@@ -84,7 +84,7 @@ $(document).ready(()=>{
 			console.log("passwords match")
 			
 			if(numUsers == null){
-				numUsers = 0;
+				numUsers = 1;
 				console.log("numUsers is zero",numUsers)
 			}else{
 				numUsers++;

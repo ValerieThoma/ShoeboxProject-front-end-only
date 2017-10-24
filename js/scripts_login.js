@@ -62,7 +62,7 @@ $(document).ready(()=>{
 		var enteredPassword = $('.password').val();
 		console.log("enteredPassword", enteredPassword)
 
-		for (i=0; i < numUsers; i++){
+		for (i=1; i <= numUsers; i++){
 
 			// userObj.userType = localStorage.getItem('type'+i)
 			userObj.passwd = localStorage.getItem('password'+i)
@@ -110,7 +110,7 @@ $(document).ready(()=>{
 		var enteredPassword = $('.password').val();
 		console.log("enteredPassword", enteredPassword)
 
-		for (i=0; i < numUsers; i++){
+		for (i=1; i <= numUsers; i++){
 
 			// userObj.userType = localStorage.getItem('type'+i)
 			userObj.passwd = localStorage.getItem('password'+i)
@@ -130,6 +130,7 @@ $(document).ready(()=>{
 					window.location.href = "user_home.html"
 				}
 			}else{
+				console.log("pswd error", enteredEmail, userObj.userEmail)
 				$('.password-error').html("Unknown or incorrect email address");
 			}
 		}
