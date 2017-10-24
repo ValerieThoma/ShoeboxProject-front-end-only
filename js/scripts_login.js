@@ -82,6 +82,7 @@ $(document).ready(()=>{
 					$('.password-error').html("You just logged in to the volunteer page!");
 				}
 			}else{
+
 				$('.password-error').html("Unknown or incorrect email address");
 			}
 		}
@@ -120,15 +121,18 @@ $(document).ready(()=>{
 			// userObj.signupDate = localStorage.getItem('signupDate'+i)
 
 			console.log("userObj.userEmail", userObj.userEmail)
+			console.log("userObj.passwd", userObj.passwd)
 
 			if (enteredEmail == userObj.userEmail){
+
 				if (enteredPassword != userObj.passwd){
 					console.log(" != timesSubmitIsRun", timesSubmitIsRun)
 					$('.password-error').html("Incorrect password.");
 				}else{
 					console.log(" == timesSubmitIsRun", timesSubmitIsRun)
-					window.location.href = "user_home.html"
+					//window.location.href = "user_home.html"
 				}
+
 			}else{
 				console.log("pswd error", enteredEmail, userObj.userEmail)
 				$('.password-error').html("Unknown or incorrect email address");
