@@ -145,15 +145,15 @@ $(document).ready(()=>{
 			userObj.passwd = localStorage.getItem('password'+i)
 			userObj.userEmail = localStorage.getItem('userEmail'+i)
 ```
-``` bash script
-	wrote a script to login to the ubuntu aws site and named it awscript, and put it in the directory
-	that my terminal opens into so it changes the directory automatically and then logs in\
+```script
+wrote a bash script to login to the ubuntu aws site and named it awscript, and put it in the directory
+that my terminal opens into so it changes the directory automatically and then logs in\
 
 cd desktop/digitalcrafts
 sudo ssh -i 'alsawskeys.pem' ubuntu@ec2-18-221-235-147.us-east-2.compute.amazonaws.com
 ```
 ``` 
-	to run this script, open a terminal and run:
+to run this script, open a terminal and run:
 
 sh awscript 
 ```
