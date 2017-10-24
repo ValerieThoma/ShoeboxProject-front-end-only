@@ -121,6 +121,13 @@ $(document).ready(()=>{
 			userObj.passwd = localStorage.getItem('password'+i)
 			userObj.userEmail = localStorage.getItem('userEmail'+i)
 ```
+``` script to login to the ubuntu aws site:
+cd desktop/digitalcrafts
+sudo ssh -i 'alsawskeys.pem' ubuntu@ec2-18-221-235-147.us-east-2.compute.amazonaws.com
+```
+``` to run script, open terminal and run:
+sh awscript 
+```
 ## Screenshots:
 ![Homepage](images/screen-shots/mobile-home.jpg)
 ![Map](images/screen-shots/map.png)
