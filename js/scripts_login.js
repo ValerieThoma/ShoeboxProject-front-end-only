@@ -81,16 +81,7 @@ $(document).ready(()=>{
 	});
 	
 
-	// $('.youth-sign-up-form').submit((event)=>{
-	// 	event.preventDefault();
-	// 	var password = $('.password').val();
-	// 	var passwordConfirm = localStorage.getItem('user-password');
-	// 	if(password != passwordConfirm){
-	// 		$('.password-error').html("Incorrect password.");
-	// 	}else{
-	// 		window.location.href = "user_home.html"
-	// 	}
-	// });
+	// if not a current user, button redirects to the signup page
 
 	$(".youth-btn").click(function(){
 		window.location.href = "user-signup-page.html"
