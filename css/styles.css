@@ -498,7 +498,7 @@ div > label.agree{
 /////////////USER_HOME STYLES//////////////
 /////////////////////////////////////// */
 .user-wrapper{
-	height: 100vh;
+	max-height: 100vh;
 }
 .container{
 	margin: 100px;
