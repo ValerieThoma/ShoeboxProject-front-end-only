@@ -17,6 +17,12 @@ $(document).ready(()=>{
 		event.preventDefault();
 		window.open("map.html", "_blank", "toolbar=yes,scrollbar=yes,resizeable=yes,top=55,left=75,width=700,height=700");
 	});
+	$(function() {
+		$('#ChangeToggle').click(function() {
+			$('#navbar-hamburger').toggleClass('hidden');
+			$('#navbar-close').toggleClass('hidden');  
+		});
+	});
 
 	// Scrollspy attempt
 	// $('body').scrollspy({target: ".navbar", offset: 50});

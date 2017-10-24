@@ -12,72 +12,43 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<script type="text/javascript">
-    $(function() {
-  $('#ChangeToggle').click(function() {
-    $('#navbar-hamburger').toggleClass('hidden');
-    $('#navbar-close').toggleClass('hidden');  
-  });
-});
+    
   </script>
-  <style type="text/css">
-    @media screen and (min-width: 768px){
-      .navbar{
-        display: none;
-        margin-left: 0;
-      }
-    }
-    @media screen and (max-width: 768px){
-      .login-button{
-        display: block;
-        margin: 10px 0;
-      }
-      .navbar-nav{
-        margin-top: 50px;
-      }
-      .header-when-large{
-      	display: none;
-      }
-    }
-  </style>
 </head>
 <body>
 	<nav class="navbar navbar-default">
-  <div class="">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="header">
-      <button id="ChangeToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <div id="navbar-hamburger">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </div>
-        <div id="navbar-close" class="hidden">
-          <span class="glyphicon glyphicon-remove"></span>
-        </div>
-      </button>
-      <a href="index.html"><img class="logo" src="./images/sm-sb-logo.png" height="50" width="70" /></a>
-        <img class="sp" src="./images/logo-lettering/sb-lettering_white.png" height="50" width="170"/>
-      <div class="login">
-          <button class="btn btn-info family-login login-button">Family Login</button>
-          <button class="btn btn-info volunteer-login login-button">Volunteer Login</button>
-        </div>
-    </div>
+  		<div>
+    		<div class="header">
+     			<button id="ChangeToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        			<div id="navbar-hamburger">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+        			</div>
+       				<div id="navbar-close" class="hidden">
+          				<span class="glyphicon glyphicon-remove"></span>
+        			</div>
+      			</button>
+      			<a href="index.html"><img class="logo" src="./images/sm-sb-logo.png" height="50" width="70" /></a>
+        		<img class="sp" src="./images/logo-lettering/sb-lettering_white.png" height="50" width="170"/>
+      			<div class="login">
+			        <button class="btn btn-info family-login login-button">Family Login</button>
+			        <button class="btn btn-info volunteer-login login-button">Volunteer Login</button>
+        		</div>
+    		</div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#about">About</a>
-        </li>
-        <li class="active"><a href="blog.html">Blog</a>
-        </li>
-        <li class="active"><a href="volunteer_form.html">Volunteer</a>
-        </li>
-        <li class="active"><a href="#contact">Contact</a></li>
-        <li class="active"><a href="https://stripe.com" target="_blank">Donate</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      			<ul class="nav navbar-nav">
+			        <li class="active"><a href="#about">About</a></li>
+			        <li class="active"><a href="blog.html">Blog</a></li>
+			        <li class="active"><a href="volunteer_form.html">Volunteer</a></li>
+			        <li class="active"><a href="#contact">Contact</a></li>
+			        <li class="active"><a href="https://stripe.com" target="_blank">Donate</a></li>
+      			</ul>
+    		</div>
+  		</div>
+	</nav>
 	<div class="wrapper">
 		<div class="header col-sm-12 header-when-large">
 			<div class="nav-bar">

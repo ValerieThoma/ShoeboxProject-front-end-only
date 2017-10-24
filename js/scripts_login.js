@@ -33,14 +33,59 @@ $(document).ready(()=>{
 	// Check input email/password against stored email/password
 
 	$('.sign-up-form').submit((event)=>{
+		// event.preventDefault();
+		// console.log("volunteer form submitted")
+		// var password = $('.password').val();
+		// var passwordConfirm = localStorage.getItem('vol-password');
+		// if(password != passwordConfirm){
+		// 	$('.password-error').html("Incorrect password.");
+		// }else{
+		// 	window.location.href = "user_home.html"
+		// }
 		event.preventDefault();
 		console.log("volunteer form submitted")
-		var password = $('.password').val();
-		var passwordConfirm = localStorage.getItem('vol-password');
-		if(password != passwordConfirm){
-			$('.password-error').html("Incorrect password.");
-		}else{
-			window.location.href = "user_home.html"
+		timesSubmitIsRun++;
+
+		var userObj = {
+			userType :  [],
+			fullName : [],
+			userPhone : [],
+			userEmail : [],
+			passwd : [],
+			signupDate : []
+		}
+
+		var numUsers = localStorage.getItem('users-signedup')
+		console.log("numUsers", numUsers)
+		var enteredEmail = $('.email').val();
+		console.log("enteredEmail", enteredEmail)
+		var enteredPassword = $('.password').val();
+		console.log("enteredPassword", enteredPassword)
+
+		for (i=1; i <= numUsers; i++){
+
+			// userObj.userType = localStorage.getItem('type'+i)
+			userObj.passwd = localStorage.getItem('password'+i)
+			userObj.userEmail = localStorage.getItem('userEmail'+i)
+			// userObj.fullName = localStorage.getItem('fullName'+i)
+			// userObj.userPhone = localStorage.getItem('userPhone'+i)
+			// userObj.signupDate = localStorage.getItem('signupDate'+i)
+
+			console.log("userObj.userEmail", userObj.userEmail)
+
+			if (enteredEmail == userObj.userEmail){
+				if (enteredPassword != userObj.passwd){
+					console.log(" != timesSubmitIsRun", timesSubmitIsRun)
+					$('.password-error').html("Incorrect password.");
+				}else{
+					console.log(" == timesSubmitIsRun", timesSubmitIsRun)
+					$('.password-error').html("You just logged in to the volunteer page!");
+					break;
+				}
+			}else{
+
+				$('.password-error').html("Unknown or incorrect email address");
+			}
 		}
 	});
 
@@ -64,28 +109,34 @@ $(document).ready(()=>{
 		console.log("numUsers", numUsers)
 		var enteredEmail = $('.email').val();
 		console.log("enteredEmail", enteredEmail)
+		var enteredPassword = $('.password').val();
+		console.log("enteredPassword", enteredPassword)
 
-		for (i=0; i <= numUsers; i++){
+		for (i=1; i <= numUsers; i++){
 
-			userObj.userType = localStorage.getItem('type'+i)
+			// userObj.userType = localStorage.getItem('type'+i)
 			userObj.passwd = localStorage.getItem('password'+i)
 			userObj.userEmail = localStorage.getItem('userEmail'+i)
-			userObj.fullName = localStorage.getItem('fullName'+i)
-			userObj.userPhone = localStorage.getItem('userPhone'+i)
-			userObj.signupDate = localStorage.getItem('signupDate'+i)
+			// userObj.fullName = localStorage.getItem('fullName'+i)
+			// userObj.userPhone = localStorage.getItem('userPhone'+i)
+			// userObj.signupDate = localStorage.getItem('signupDate'+i)
 
-		console.log("userObj.userEmail", userObj.userEmail)
+			console.log("userObj.userEmail", userObj.userEmail)
+			console.log("userObj.passwd", userObj.passwd)
+
 			if (enteredEmail == userObj.userEmail){
-				var enteredPassword = $('.password').val();
-		console.log("enteredPassword", enteredPassword)
+
 				if (enteredPassword != userObj.passwd){
 					console.log(" != timesSubmitIsRun", timesSubmitIsRun)
 					$('.password-error').html("Incorrect password.");
 				}else{
 					console.log(" == timesSubmitIsRun", timesSubmitIsRun)
 					window.location.href = "user_home.html"
+					break;
 				}
+
 			}else{
+				console.log("pswd error", enteredEmail, userObj.userEmail)
 				$('.password-error').html("Unknown or incorrect email address");
 			}
 		}

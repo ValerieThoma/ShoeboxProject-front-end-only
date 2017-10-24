@@ -178,7 +178,56 @@ a#volunteer-FAQ-link{
 	z-index: -1;
 }
 
-
+/*Drop-down menu for small screens*/
+@media screen and (min-width: 768px){
+      .navbar{
+        display: none;
+        margin-left: 0;
+      }
+    }
+@media screen and (max-width: 768px){
+  .login-button{
+    display: block;
+    margin: 10px 0;
+  }
+  .navbar-nav{
+    margin-top: 50px;
+  }
+  .header-when-large{
+  	display: none;
+  }
+  .header{
+  	z-index: 5;
+  }
+  .login{
+  	margin-right: 120px;
+  }
+  .navbar-default{
+  	margin: 0px;
+  	position: absolute;
+  	border: none;
+  }
+  .icon-bar{
+  	background-color: #5BC0DE !important;
+  }
+  .active{
+  	border: 1px solid gray;
+  	left: 3px;
+  	/*border-radius: 10px;*/
+  }
+  .navbar-collapse{
+  	position: absolute;
+  	z-index: 4;
+  	min-width: 100vw;
+  	/*top: 30px;*/
+  	padding-top: 55px;
+  	border: none;
+  	/*left: 300px;*/
+  }
+  .sp{
+  	display: inline-block;
+  }
+}
 
 /* ////////////////////////////////////////
 /////////////VOLUNTEER FORM STYLES//////////////

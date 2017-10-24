@@ -28,8 +28,8 @@ $(document).ready(()=>{
 				console.log("passwords match")
 				
 				if(numUsers == null){
-					numUsers = 0;
-					console.log("numUsers is zero",numUsers)
+					numUsers = 1;
+					console.log("numUsers is null",numUsers)
 				}else{
 					numUsers++;
 				}
