@@ -80,6 +80,7 @@ $(document).ready(()=>{
 				}else{
 					console.log(" == timesSubmitIsRun", timesSubmitIsRun)
 					$('.password-error').html("You just logged in to the volunteer page!");
+					break;
 				}
 			}else{
 
