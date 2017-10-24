@@ -56,6 +56,8 @@ $(document).ready(()=>{
 
 	// store input data from user signup screen in localStorage
 	
+		// create an object to put the data into
+
 		var userObj = {
 			userType :  [],
 			fullName : [],
@@ -64,13 +66,17 @@ $(document).ready(()=>{
 			passwd : [],
 			signupDate : []
 		}
-		userObj.signupDate = new Date();
+		userObj.signupDate = new Date(); 	// get the date and put it into the object
 
 		$('.user-sign-up-form').submit((event)=>{
 			event.preventDefault();
 
-			var password = $('.password').val();
+			// get the passwords that were entered on the screen:
+
+			var password = $('.password').val();	
 			var passwordConfirm = $('.password-confirm').val();
+
+			// get the number of stored users from the site's localStorage 
 
 			var numUsers = localStorage.getItem('users-signedup')
 			
@@ -81,14 +87,20 @@ $(document).ready(()=>{
 			}else{
 				console.log("passwords match")
 				
+				// if the number of users is null, set the number to 1
+
 				if(numUsers == null){
 					numUsers = 1;
 					console.log("numUsers is null",numUsers)
 				}else{
-					numUsers++;
+					numUsers++;		// increment the number of users objects stored in localStorage
 				}
-				console.log("numUsers ",numUsers)
+				
+				// set the new number of users in localStorage
+
 				localStorage.setItem('users-signedup',numUsers)
+
+				// put the new data entered by the user into the object
 
 				userObj.userType= 'Family';
 				userObj.fullName = $('.full-name').val();
@@ -96,12 +108,16 @@ $(document).ready(()=>{
 				userObj.userEmail = $('.email').val();
 				userObj.passwd = $('.password').val();
 
+				// store the data in localStorage with a number at the end of the field name
+
 				localStorage.setItem("userType"+numUsers, userObj.userType);
 				localStorage.setItem("password"+numUsers, userObj.passwd);
 				localStorage.setItem("fullName"+numUsers, userObj.fullName);
 				localStorage.setItem("userEmail"+numUsers, userObj.userEmail);
 				localStorage.setItem("userPhone"+numUsers, userObj.userPhone);
 				localStorage.setItem("signupDate"+numUsers, userObj.signupDate);
+
+				// bring up the user page
 
 				window.location.href = "user_home.html"
 				
@@ -111,25 +127,33 @@ $(document).ready(()=>{
 	});	
 ```
 ``` javascript
-	//	to access the localStorage:
+	//	to access the localStorage when a user logs in:
+
+		// get the number of users stored in localStorage
+
 		var numUsers = localStorage.getItem('users-signedup')
+
+		//	get the data the user entered on the login page
+
 		var enteredEmail = $('.email').val();
 		var enteredPassword = $('.password').val();
 
-		for (i=1; i <= numUsers; i++){
+		for (i=1; i <= numUsers; i++){		// loop through the sets of data in localStorage
+
+			// retrieve the emails and passwords until a match is found or the data ends
 
 			userObj.passwd = localStorage.getItem('password'+i)
 			userObj.userEmail = localStorage.getItem('userEmail'+i)
 ```
-``` 
-	wrote a script to login to the ubuntu aws site and named it awscript, and put it in the directory
-	that my terminal opens into so it changes the directory automatically and then logs in\
+```script
+wrote a bash script to login to the ubuntu aws site and named it awscript, and put it in the directory
+that my terminal opens into so it changes the directory automatically and then logs in\
 
 cd desktop/digitalcrafts
 sudo ssh -i 'alsawskeys.pem' ubuntu@ec2-18-221-235-147.us-east-2.compute.amazonaws.com
 ```
 ``` 
-	to run this script, open a terminal and run:
+to run this script, open a terminal and run:
 
 sh awscript 
 ```
